@@ -1,89 +1,118 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+<body>
 <!--    <div id="app"></div>-->
 <!--    <script type="module" src="/src/main.js"></script>-->
 
-    <h1>Tere Vali-IT lend 40!!! :)</h1>
-    <!--todo: HTML - HyperText Markup Language -->
-    <!--todo: Conflu: HTML, CSS ja JavaScript -->
-    <!--todo: Conflu: HTML - HyperText Markup Language -->
-    <!--todo: Conflu: HTML'i märgendid (tag'id) -->
-    <!--todo: headerid-->
-    <!--Meie pank-->
-    <!--Eriti äge pank-->
-    <!--todo: paragraph-->
-    <!-- Siin on meie 90'ndate stiilis pank. And it's awesome! -->
-    <!--todo: <span>-->
-    <!-- span näide paragraph sees -->
-    <!--todo: <br> -->
-    <!-- tühi rida -->
-    <!--todo: list <ul> bullet points ja <ol> järjest numbrid -->
-    <!--Meie panga kontorid-->
-    <!-- Tallinn -->
-    <!-- Tartu -->
-    <!-- Viljandi -->
-    <!--todo: <img>, external, internal, width-->
-    <!-- Kaart -->
-    <!--todo: <table>-->
-    <!-- Meie kliendid (Eesnimi, Perekonnanimi) -->
-    <!--todo: <input> text  (placeholder) -->
-    <!-- Lisa uus klient -->
-    <!-- Eesnimi (first_name)-->
-    <!-- Perekonnanimi (last_name)-->
-    <!--todo: <input> text  (hidden), value -->
-    <!-- peidetud info -->
-    <!--todo: <input> number (placeholder)-->
-    <!-- Vanus (age) -->
-    <!--todo: <input> date -->
-    <!-- sünnikuupäev -->
-    <!--todo: <select> (disabled, selected, label) -->
-    <!-- --Linn-- -->
-    <!-- Tallinn -->
-    <!-- Tartu -->
-    <!-- Viljandi -->
-    <!--todo: <input> textarea (label, cols, rows)-->
-    <!-- Tutvustus -->
-    <!--todo: <input> radio (label, name="group1" )-->
-    <!-- Mees -->
-    <!-- Naine -->
-    <!--todo: <input> password (placeholder)-->
-    <!-- parool -->
-    <!--todo: Link <a> external, internal, width-->
-    <!--todo: <input> checkbox -->
-    <!-- Nõustsun kõikde tingumustega -->
-    <!--todo: <input> file -->
-    <!-- faili lisamine -->
-    <!--todo: div'id -->
-    <!-- mingi suva näide -->
-    <!--todo: <button> lisa klient -->
-    <!--todo: Stiilid -->
-    <!--todo: Conflu: CSS -->
-    <!--todo: Conflu: CSS selectorid -->
-    <!--todo: mässame veidi CSS'iga -->
-    <!--todo: Reasisene stiil -->
-    <!--todo: Sisemised (manustatud) stiilid -->
-    <!--todo: Välised stiilid -->
-    <!--todo: bootstrap -->
-    <!-- grid,row,col -->
-    <!-- input, table, button, jne -->
-    <!--todo: Conflu: JavaScript -->
-    <!--todo: <script> -->
-    <!--todo: addCustomer() -->
-    <!-- simple Hello World alert -->
-    <!-- Hello World console.log() -->
-    <!-- customerV1 objekti konstruktoriga (staatilised väärtused) -->
-    <!-- console.log(customerV1), alert(customerV1) -->
-    <!-- JSON.stringify() -->
-    <!-- customerV2 objekt literaaliga (staatilised väärtused) -->
-    <!-- customerV2 lisame peale objekti loomist juurde mingi suvalise välja -->
-    <!-- customerV3 objekt literaaliga (väärtused html elementidest) -->
+<h1>Meie pank</h1>
 
-  </body>
+<h5>Eriti äge pank</h5>
+<br>
+
+<p>Siin on meie <span style="color: red">90'ndate stiilis pank</span> and it's awesome!</p>
+
+
+<br>
+<h5>Meie panga kontorid</h5>
+<ul>
+  <li>Tallinn</li>
+  <li>Tartu</li>
+  <li>Viljandi</li>
+</ul>
+
+<br>
+<h5>Meie kliendid</h5>
+
+<table style="border-style: solid">
+  <tr>
+    <td>Eesnimi</td>
+    <td>Perekonnanmi</td>
+  </tr>
+  <tr>
+    <td>Rain</td>
+    <td>Tüür</td>
+  </tr>
+</table>
+<br>
+<h5>Uus klient</h5>
+
+<label for="firstName">Eesnimi</label>
+<input type="text" id="firstName" placeholder="John">
+
+<br>
+<label for="lastName">Perekonnanimi</label>
+<input type="text" id="lastName" placeholder="Smith">
+
+<br>
+<label for="lastName">Vanus</label>
+<input type="number" id="lastName" placeholder="18">
+
+<br>
+<select id="citySelect">
+  <option value="0" disabled selected>--Linn--</option>
+  <option value="2">Tallinn</option>
+  <option value="3">Tartu</option>
+  <option value="1">Viljandi</option>
+</select>
+
+<br>
+
+<br>
+
+<button type="submit">Lisa klient süsteemi</button>
+
+<br>
+<br>
+<br>
+
+
+<!--todo: <select> (disabled, selected, label) -->
+<!-- --Linn-- -->
+<!-- Tallinn -->
+<!-- Tartu -->
+<!-- Viljandi -->
+<!--todo: <input> textarea (label, cols, rows)-->
+<!-- Tutvustus -->
+<!--todo: <input> radio (label, name="group1" )-->
+<!-- Mees -->
+<!-- Naine -->
+<!--todo: <input> password (placeholder)-->
+<!-- parool -->
+<!--todo: Link <a> external, internal, width-->
+<!--todo: <input> checkbox -->
+<!-- Nõustsun kõikde tingumustega -->
+<!--todo: <input> file -->
+<!-- faili lisamine -->
+<!--todo: div'id -->
+<!-- mingi suva näide -->
+<!--todo: <button> lisa klient -->
+<!--todo: Stiilid -->
+<!--todo: Conflu: CSS -->
+<!--todo: Conflu: CSS selectorid -->
+<!--todo: mässame veidi CSS'iga -->
+<!--todo: Reasisene stiil -->
+<!--todo: Sisemised (manustatud) stiilid -->
+<!--todo: Välised stiilid -->
+<!--todo: bootstrap -->
+<!-- grid,row,col -->
+<!-- input, table, button, jne -->
+<!--todo: Conflu: JavaScript -->
+<!--todo: <script> -->
+<!--todo: addCustomer() -->
+<!-- simple Hello World alert -->
+<!-- Hello World console.log() -->
+<!-- customerV1 objekti konstruktoriga (staatilised väärtused) -->
+<!-- console.log(customerV1), alert(customerV1) -->
+<!-- JSON.stringify() -->
+<!-- customerV2 objekt literaaliga (staatilised väärtused) -->
+<!-- customerV2 lisame peale objekti loomist juurde mingi suvalise välja -->
+<!-- customerV3 objekt literaaliga (väärtused html elementidest) -->
+</body>
+
 </html>
