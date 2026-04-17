@@ -6,6 +6,7 @@
         <img
           src="https://media.tenor.com/nANqORN7qhQAAAAM/explosion-explode.gif"
           class="img-fluid"
+          alt="pildil on pank jägalajuga"
         />
       </div>
     </div>
