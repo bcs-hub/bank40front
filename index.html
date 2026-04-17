@@ -52,8 +52,8 @@
 <input type="text" id="lastName" placeholder="Smith">
 
 <br>
-<label for="lastName">Vanus</label>
-<input type="number" id="lastName" placeholder="18">
+<label for="age">Vanus</label>
+<input type="number" id="age" placeholder="18">
 
 <br>
 <select id="citySelect">
@@ -85,32 +85,11 @@
 
 
 <h5>Tingimused</h5>
-<input type="checkbox"> <span>Olen tingimustega nõus</span>
+<input type="checkbox" id="conditionsCheck"> <span>Olen tingimustega nõus</span>
 
 <a href="/tingimused.html">Tingimused</a>
 <a href="/hinnakiri.html">Hinnakiri</a>
 
-
-<!--todo: <input> password (placeholder)-->
-<!-- parool -->
-<!--todo: Link <a> external, internal, width-->
-<!--todo: <input> checkbox -->
-<!-- Nõustsun kõikde tingumustega -->
-<!--todo: <input> file -->
-<!-- faili lisamine -->
-<!--todo: div'id -->
-<!-- mingi suva näide -->
-<!--todo: <button> lisa klient -->
-<!--todo: Stiilid -->
-<!--todo: Conflu: CSS -->
-<!--todo: Conflu: CSS selectorid -->
-<!--todo: mässame veidi CSS'iga -->
-<!--todo: Reasisene stiil -->
-<!--todo: Sisemised (manustatud) stiilid -->
-<!--todo: Välised stiilid -->
-<!--todo: bootstrap -->
-<!-- grid,row,col -->
-<!-- input, table, button, jne -->
 <!--todo: Conflu: JavaScript -->
 <!--todo: <script> -->
 <!--todo: addCustomer() -->
@@ -127,9 +106,50 @@
 <br>
 <br>
 
-<button type="submit">Lisa klient süsteemi</button>
+<button type="submit" onclick="addCustomer()">Lisa klient süsteemi</button>
 
 <br>
 </body>
+<script>
+
+  // todo: Lisa uus klient
+  function addCustomer() {
+
+    let customerV1 =
+
+    {
+      firstName: "RAIN",
+      lastName: "Tüür",
+      age: 18,
+    }
+
+
+
+
+
+
+
+
+    let message = "Peeter on 'väge tore' tüüp"
+
+
+
+
+
+    alert(JSON.stringify(customerV1))
+  }
+
+</script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
