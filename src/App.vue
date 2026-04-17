@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 mb-5">
     <RouterLink class="navbar-brand" to="/">Bank40</RouterLink>
     <button
       class="navbar-toggler"
@@ -11,8 +11,8 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navMenu">
       <div class="navbar-nav">
-        <RouterLink class="nav-link" to="/">Home</RouterLink>
-        <RouterLink class="nav-link" to="/about">About</RouterLink>
+        <RouterLink class="nav-link" to="/">Kodu</RouterLink>
+        <RouterLink class="nav-link" to="/atms">Pangaautomaadid</RouterLink>
       </div>
     </div>
   </nav>

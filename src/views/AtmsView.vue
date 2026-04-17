@@ -2,8 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h1>yikes! midagi läks valesti :)</h1>
-        <img src="https://c.tenor.com/DeGMcBrA9-sAAAAd/tenor.gif" class="img-fluid" />
+        <h1>Pangaautomaadid</h1>
       </div>
     </div>
   </div>
@@ -11,6 +10,6 @@
 
 <script>
 export default {
-  name: 'ErrorView',
+  name: 'AtmsView',
 }
 </script>
