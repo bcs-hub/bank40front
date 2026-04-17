@@ -2,15 +2,14 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h2>Meie tore Pank</h2>
-      </div>
-      <div class="col">
-        <img src="https://pngimg.com/uploads/bank/bank_PNG24.png" class="img-fluid">
+        <h1>Pangaautomaadid</h1>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
+export default {
+  name: 'AtmsView'
+}
 </script>
