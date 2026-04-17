@@ -2,13 +2,18 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h1>Siit leiad kõik Eesti pangaautomaatide asukohad</h1>
+        <h1>Pangaautomaadid</h1>
       </div>
       <div class="col">
-        <img src="" class="img-fluid">
+        <img src="" class="img-fluid" />
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<style scoped></style>
+<script>
+export default {
+  name: 'AtmsView',
+}
+</script>
