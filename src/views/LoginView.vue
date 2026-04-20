@@ -4,11 +4,23 @@
       <div class="col col-3">
         <h1 class="mb-3">Sisse logimine</h1>
         <div class="form-floating mb-3">
-          <input v-model="username" type="text" class="form-control" id="inputUsername" placeholder="Kasutajanimi" />
+          <input
+            v-model="username"
+            type="text"
+            class="form-control"
+            id="inputUsername"
+            placeholder="Kasutajanimi"
+          />
           <label for="inputUsername">Kasutajanimi</label>
         </div>
         <div class="form-floating mb-3">
-          <input v-model="password" type="password" class="form-control" id="inputPassword" placeholder="Parool" />
+          <input
+            v-model="password"
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Parool"
+          />
           <label for="inputPassword">Parool</label>
         </div>
 
@@ -21,15 +33,25 @@
 <script>
 export default {
   name: 'LoginView',
-  data(){
+  data() {
     return {
       username: '',
       password: '',
     }
   },
   methods: {
+
     login() {
-      alert('Tere maailm')
+      if (this.allFormFieldsAreCorrect()) {
+        // saada sõnum
+      } else {
+        // viska viga
+      }
+
+    },
+
+    allFormFieldsAreCorrect() {
+      return this.username !== '' && this.password !== ''
     },
   },
 }
