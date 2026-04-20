@@ -1,6 +1,13 @@
 <template>
   <div class="container text-center">
     <div class="row justify-content-center">
+
+      <div class="col col-6">
+        <div class="alert alert-danger" role="alert"> {{ errorMessage }} </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
       <div class="col col-3">
         <h1 class="mb-3">Sisse logimine</h1>
         <div class="form-floating mb-3">
@@ -37,17 +44,16 @@ export default {
     return {
       username: '',
       password: '',
+      errorMessage: '',
     }
   },
   methods: {
-
     login() {
       if (this.allFormFieldsAreCorrect()) {
-        // saada sõnum
+        // saadame backile (stoplight) sõnumi
       } else {
-        // viska viga
+        this.errorMessage = 'Täida kõik väljad'
       }
-
     },
 
     allFormFieldsAreCorrect() {
