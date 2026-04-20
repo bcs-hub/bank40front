@@ -2,7 +2,7 @@
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col col-6">
-        <AlertError :error-message="errorMessage"/>
+        <AlertError :error-message="errorMessage" />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -37,6 +37,7 @@
 
 <script>
 import AlertError from '@/components/AlertError.vue'
+import axios from 'axios'
 
 export default {
   name: 'LoginView',
@@ -50,15 +51,22 @@ export default {
   },
   methods: {
     login() {
+      this.resetErrorMessage()
       if (this.allFormFieldsAreCorrect()) {
-        // saadame backile (stoplight) sõnumi
+
+      axios.get('/login')
+
       } else {
         this.errorMessage = 'Täida kõik väljad'
       }
     },
 
+    resetErrorMessage() {
+      this.errorMessage = ''
+    },
+
     allFormFieldsAreCorrect() {
-      return this.username !== '' && this.password !== ''
+      return this.username && this.password
     },
   },
 }
