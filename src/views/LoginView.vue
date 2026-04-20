@@ -2,8 +2,7 @@
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col col-6">
-
-        <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+        <AlertError :error-message="errorMessage"/>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -37,11 +36,14 @@
 </template>
 
 <script>
+import AlertError from '@/components/AlertError.vue'
+
 export default {
   name: 'LoginView',
+  components: { AlertError },
   data() {
     return {
-      username: '',
+      username: 'BBBB',
       password: '',
       errorMessage: '',
     }
