@@ -2,28 +2,26 @@
   <div class="container text-center">
     <div class="row">
       <div class="col col-3">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Kasutajanimi</span>
+        <div class="form-floating mb-3">
           <input
-            type="text"
+            type="email"
             class="form-control"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="floatingInput"
+            placeholder="name@example.com"
           />
+          <label for="floatingInput">Email address</label>
         </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Parool</span>
+        <div class="form-floating">
           <input
-            type="text"
+            type="password"
             class="form-control"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="floatingPassword"
+            placeholder="Password"
           />
+          <label for="floatingPassword">Password</label>
         </div>
 
-        <button @click="helloWorld" type="submit" class="btn btn-outline-secondary">
-          Login
-        </button>
+        <button @click="helloWorld" type="submit" class="btn btn-outline-secondary">Login</button>
       </div>
     </div>
   </div>
