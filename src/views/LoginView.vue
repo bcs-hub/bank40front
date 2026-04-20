@@ -47,24 +47,29 @@ export default {
       username: '',
       password: '',
       errorMessage: '',
+      loginResponse: {
+        userId: 0,
+        roleName: '',
+      },
     }
   },
   methods: {
     login() {
       this.resetErrorMessage()
       if (this.allFormFieldsAreCorrect()) {
-
-        axios.get('/api/login', {
-          params: {
-            username: 'AAA',
-            password: 'BBB',
-          },
-        })
-          .then(response => {
-            response
+        axios
+          .get('/api/login', {
+            params: {
+              username: 'AAA',
+              password: 'BBB',
+            },
+          })
+          .then((response) => {
+            this.loginResponse = response.data
+            localStorage.setItem('userId', this.loginResponse.userId)
+            localStorage.setItem('roleName', this.loginResponse.roleName)
           })
           .catch()
-
       } else {
         this.errorMessage = 'Täida kõik väljad'
       }
