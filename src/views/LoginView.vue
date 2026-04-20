@@ -1,27 +1,18 @@
 <template>
   <div class="container text-center">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col col-3">
+        <h1 class="mb-3">Sisse logimine</h1>
         <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput">Email address</label>
+          <input v-model="username" type="text" class="form-control" id="inputUsername" placeholder="Kasutajanimi" />
+          <label for="inputUsername">Kasutajanimi</label>
         </div>
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Password</label>
+        <div class="form-floating mb-3">
+          <input v-model="password" type="password" class="form-control" id="inputPassword" placeholder="Parool" />
+          <label for="inputPassword">Parool</label>
         </div>
 
-        <button @click="helloWorld" type="submit" class="btn btn-outline-secondary">Login</button>
+        <button @click="login" type="submit" class="btn btn-outline-secondary">Login</button>
       </div>
     </div>
   </div>
@@ -30,8 +21,14 @@
 <script>
 export default {
   name: 'LoginView',
+  data(){
+    return {
+      username: '',
+      password: '',
+    }
+  },
   methods: {
-    helloWorld() {
+    login() {
       alert('Tere maailm')
     },
   },
