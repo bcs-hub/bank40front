@@ -1,5 +1,7 @@
 <template>
-  <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+  <div v-if="errorMessage" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
 </template>
 
 <script>

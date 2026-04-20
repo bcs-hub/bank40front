@@ -43,7 +43,7 @@ export default {
   components: { AlertError },
   data() {
     return {
-      username: 'BBBB',
+      username: '',
       password: '',
       errorMessage: '',
     }
