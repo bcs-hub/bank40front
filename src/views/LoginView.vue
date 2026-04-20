@@ -54,7 +54,16 @@ export default {
       this.resetErrorMessage()
       if (this.allFormFieldsAreCorrect()) {
 
-      axios.get('/login')
+        axios.get('/api/login', {
+          params: {
+            username: 'AAA',
+            password: 'BBB',
+          },
+        })
+          .then(response => {
+            response
+          })
+          .catch()
 
       } else {
         this.errorMessage = 'Täida kõik väljad'
