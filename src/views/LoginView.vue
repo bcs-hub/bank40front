@@ -1,11 +1,10 @@
 <template>
   <div class="container text-center">
     <div class="row justify-content-center">
-
       <div class="col col-6">
-        <div class="alert alert-danger" role="alert"> {{ errorMessage }} </div>
-      </div>
 
+        <div class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+      </div>
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
