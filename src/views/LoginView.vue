@@ -90,10 +90,10 @@ export default {
 
     async handleLoginResponse(response) {
       this.loginResponse = response.data
-      await new Promise((resolve) => setTimeout(resolve, 4000))
       localStorage.setItem('userId', this.loginResponse.userId)
       localStorage.setItem('roleName', this.loginResponse.roleName)
       // todo: menüüs log out kuvamine
+      this.$emit('event-user-logged-in')
       // todo: navigeeri atms lehele
     },
 

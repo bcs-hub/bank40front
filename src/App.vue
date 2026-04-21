@@ -13,14 +13,39 @@
       <div class="navbar-nav">
         <RouterLink class="nav-link" to="/">Kodu</RouterLink>
         <RouterLink class="nav-link" to="/atms">Pangaautomaadid</RouterLink>
-        <RouterLink class="nav-link" to="/login">Sisse logimine</RouterLink>
+
+        <RouterLink v-if="isLoggedIn" @click="executeLogOut" class="nav-link" to="/">Logi välja</RouterLink>
+        <RouterLink v-else class="nav-link" to="/login">Sisse logimine</RouterLink>
       </div>
     </div>
   </nav>
 
-  <RouterView />
+  <RouterView @event-user-logged-in="updateLoggedInStatus" />
 </template>
 
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
+import AuthService from '@/auth/AuthService.js'
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      isLoggedIn: false,
+    }
+  },
+  methods: {
+    updateLoggedInStatus() {
+      this.isLoggedIn = AuthService.isLoggedIn()
+    },
+
+    executeLogOut() {
+      localStorage.removeItem('userId')
+      localStorage.removeItem('roleName')
+      this.updateLoggedInStatus()
+    },
+  },
+  beforeMount() {
+    this.updateLoggedInStatus()
+  },
+}
 </script>
