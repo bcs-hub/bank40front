@@ -29,7 +29,11 @@
           <label for="inputPassword">Parool</label>
         </div>
 
-        <button @click="login" type="submit" class="btn btn-outline-secondary">Login</button>
+        <button v-if="showSpinner" class="btn btn-primary" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+          <span role="status">Login sisse...</span>
+        </button>
+        <button v-else @click="login" type="submit" class="btn btn-outline-secondary">Login</button>
       </div>
     </div>
   </div>
@@ -44,6 +48,8 @@ export default {
   components: { AlertError },
   data() {
     return {
+      showSpinner: false,
+
       username: '',
       password: '',
       errorMessage: '',
@@ -61,14 +67,16 @@ export default {
   },
   methods: {
     login() {
+      this.startSpinner()
       this.resetErrorMessage()
       if (this.allFormFieldsAreCorrect()) {
         LoginService.sendGetLoginRequest(this.username, this.password)
           .then((response) => this.handleLoginResponse(response))
-          .catch(error => this.handleLoginError(error))
-          .finally()
+          .catch((error) => this.handleLoginError(error))
+          .finally(() => this.stopSpinner())
       } else {
         this.errorMessage = 'Täida kõik väljad'
+        this.stopSpinner()
       }
     },
 
@@ -80,8 +88,9 @@ export default {
       return this.username && this.password
     },
 
-    handleLoginResponse(response) {
+    async handleLoginResponse(response) {
       this.loginResponse = response.data
+      await new Promise((resolve) => setTimeout(resolve, 4000))
       localStorage.setItem('userId', this.loginResponse.userId)
       localStorage.setItem('roleName', this.loginResponse.roleName)
       // todo: menüüs log out kuvamine
@@ -89,13 +98,23 @@ export default {
     },
 
     handleLoginError(error) {
-
       const statusNumber = error.response.status
       this.errorResponse = error.response.data
 
+      if (statusNumber === 403 && this.errorResponse.errorCode === 111) {
+        this.errorMessage = this.errorResponse.message
+      } else {
+        // todo: navigeeri uups midagi läks valest
+      }
+    },
 
+    startSpinner() {
+      this.showSpinner = true
+    },
 
-    }
+    stopSpinner() {
+      this.showSpinner = false
+    },
   },
 }
 </script>
