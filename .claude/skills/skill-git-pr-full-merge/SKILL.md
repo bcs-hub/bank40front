@@ -1,11 +1,11 @@
 ---
-name: skill-pr-request
-description: PR workflow — branch, commit, push, PR. No merge.
+name: skill-git-pr-full-merge
+description: Full PR workflow — branch, commit, push, PR, squash merge, cleanup
 ---
 
-# PR Request
+# PR Full Merge
 
-Workflow kuni PR loomiseni: branch → commit → push → PR.
+Complete workflow: branch → commit → push → PR → squash merge → cleanup.
 
 ## Steps
 
@@ -28,4 +28,12 @@ Workflow kuni PR loomiseni: branch → commit → push → PR.
 ### 5. Pull Request
 - Create a PR using `gh pr create` with an auto-generated title and body (Summary + Test plan).
 - Show the PR URL to the user.
-- Stop here — do not merge.
+
+### 6. Squash merge
+- Merge with `gh pr merge <number> --squash --delete-branch` (deletes remote branch automatically).
+
+### 7. Cleanup
+- Switch to master: `git checkout master`
+- Pull latest: `git fetch origin && git pull origin master`
+- Delete local feature branch only if it still exists: `git branch --list <branch>` first, then `git branch -d <branch>` if found
+- Confirm to user that everything is clean.
