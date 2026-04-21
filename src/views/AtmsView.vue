@@ -9,7 +9,14 @@
 </template>
 
 <script>
+import AuthService from '@/auth/AuthService.js'
+
 export default {
   name: 'AtmsView',
+  data() {
+    return {
+      userId: AuthService.getLoggedInUserId()
+    }
+  }
 }
 </script>
