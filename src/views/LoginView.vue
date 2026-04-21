@@ -42,6 +42,7 @@
 <script>
 import AlertError from '@/components/AlertError.vue'
 import LoginService from '@/services/LoginService.js'
+import NavigationService from '@/navigation/NavigationService.js'
 
 export default {
   name: 'LoginView',
@@ -92,9 +93,8 @@ export default {
       this.loginResponse = response.data
       localStorage.setItem('userId', this.loginResponse.userId)
       localStorage.setItem('roleName', this.loginResponse.roleName)
-      // todo: menüüs log out kuvamine
       this.$emit('event-user-logged-in')
-      // todo: navigeeri atms lehele
+      NavigationService.navigateToAtmsView()
     },
 
     handleLoginError(error) {
@@ -104,7 +104,7 @@ export default {
       if (statusNumber === 403 && this.errorResponse.errorCode === 111) {
         this.errorMessage = this.errorResponse.message
       } else {
-        // todo: navigeeri uups midagi läks valest
+        NavigationService.navigateToErrorView()
       }
     },
 
