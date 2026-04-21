@@ -47,9 +47,15 @@ export default {
       username: '',
       password: '',
       errorMessage: '',
+
       loginResponse: {
         userId: 0,
         roleName: '',
+      },
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
       },
     }
   },
@@ -59,17 +65,26 @@ export default {
       if (this.allFormFieldsAreCorrect()) {
         axios
           .get('/api/login', {
+            headers: {
+              Prefer: 'code=403, example=error'
+            },
             params: {
-              username: 'AAA',
-              password: 'BBB',
+              username: this.username,
+              password: this.password,
             },
           })
           .then((response) => {
             this.loginResponse = response.data
             localStorage.setItem('userId', this.loginResponse.userId)
             localStorage.setItem('roleName', this.loginResponse.roleName)
+            // todo: navigeeri järgmisele vaatele /atms
           })
-          .catch()
+          .catch((error) => {
+            this.errorResponse = error.response.data
+            if (error.response.status === 403 && this.errorResponse.errorCode === 111) {
+              this.errorMessage = this.errorResponse.message
+            }
+          })
       } else {
         this.errorMessage = 'Täida kõik väljad'
       }
