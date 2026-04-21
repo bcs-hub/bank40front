@@ -37,7 +37,7 @@
 
 <script>
 import AlertError from '@/components/AlertError.vue'
-import axios from 'axios'
+import LoginService from '@/services/LoginService.js'
 
 export default {
   name: 'LoginView',
@@ -63,28 +63,10 @@ export default {
     login() {
       this.resetErrorMessage()
       if (this.allFormFieldsAreCorrect()) {
-        axios
-          .get('/api/login', {
-            headers: {
-              Prefer: 'code=403, example=error'
-            },
-            params: {
-              username: this.username,
-              password: this.password,
-            },
-          })
-          .then((response) => {
-            this.loginResponse = response.data
-            localStorage.setItem('userId', this.loginResponse.userId)
-            localStorage.setItem('roleName', this.loginResponse.roleName)
-            // todo: navigeeri järgmisele vaatele /atms
-          })
-          .catch((error) => {
-            this.errorResponse = error.response.data
-            if (error.response.status === 403 && this.errorResponse.errorCode === 111) {
-              this.errorMessage = this.errorResponse.message
-            }
-          })
+        LoginService.sendGetLoginRequest(this.username, this.password)
+          .then((response) => this.handleLoginResponse(response))
+          .catch(error => this.handleLoginError(error))
+          .finally()
       } else {
         this.errorMessage = 'Täida kõik väljad'
       }
@@ -97,6 +79,23 @@ export default {
     allFormFieldsAreCorrect() {
       return this.username && this.password
     },
+
+    handleLoginResponse(response) {
+      this.loginResponse = response.data
+      localStorage.setItem('userId', this.loginResponse.userId)
+      localStorage.setItem('roleName', this.loginResponse.roleName)
+      // todo: menüüs log out kuvamine
+      // todo: navigeeri atms lehele
+    },
+
+    handleLoginError(error) {
+
+      const statusNumber = error.response.status
+      this.errorResponse = error.response.data
+
+
+
+    }
   },
 }
 </script>
