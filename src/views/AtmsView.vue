@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col col-3" >
+      <div class="col col-3">
         <select class="form-select" aria-label="Default select example">
           <option selected>-- Kõik linnad --</option>
           <option value="1">One</option>
@@ -20,6 +20,7 @@
 
 <script>
 import AuthService from '@/auth/AuthService.js'
+import CityService from '@/api-services/CityService.js'
 
 export default {
   name: 'AtmsView',
@@ -29,7 +30,16 @@ export default {
       roleName: AuthService.getLoggedInUserRoleName(),
     }
   },
-  mounted() {
+  methods: {
+    getCities() {
+      CityService.sendGetCitiesRequest()
+    },
+  },
+
+  beforeMount() {
+    this.getCities()
+  },
+
     //alert('userId: ' + this.userId + ' roleName: ' + this.roleName)
   },
 }
