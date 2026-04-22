@@ -7,7 +7,11 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <CitiesDropdown :cities="cities" />
+        <CitiesDropdown
+          :cities="cities"
+          :selectedCityId="selectedCityId"
+          @event-selected-city-changed="selectedCityId=$event"
+        />
       </div>
     </div>
   </div>
@@ -32,13 +36,14 @@ export default {
           cityName: '',
         },
       ],
+      selectedCityId:0,
     }
   },
   methods: {
     getCities() {
       CityService.sendGetCitiesRequest()
         .then((response) => this.handleGetCitiesResponse(response))
-        .catch((error) => NavigationService.navigateToErrorView())
+        .catch(() => NavigationService.navigateToErrorView())
         .finally()
     },
     handleGetCitiesResponse(response) {
