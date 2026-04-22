@@ -1,0 +1,2018 @@
+WEBVTT
+
+1
+00:00:00.478 --> 00:00:03.829
+Õpetaja: See viimane oli midagi. Ee, prügiesti kaupp.
+
+2
+00:00:04.510 --> 00:00:08.670
+Õpetaja: Ee, ma panin nüüd rekordima ja ma panen nüüd hoopis praegult pausile. Sellepärast.
+
+3
+00:00:10.691 --> 00:00:22.820
+Artur: Võtab üks, võtab mingi poole. Siis.
+
+4
+00:00:30.406 --> 00:00:30.900
+Siim: Aga meie.
+
+5
+00:00:31.334 --> 00:00:36.129
+Artur: On siis variabel? Ehk muutujad salvestrival.
+
+6
+00:00:38.373 --> 00:00:42.000
+Artur: Oota, et.
+
+7
+00:00:45.805 --> 00:00:48.720
+Siim: Nii et, ee, mis on muud?
+
+8
+00:00:49.105 --> 00:00:49.370
+Siim: Vot.
+
+9
+00:00:49.570 --> 00:00:50.970
+Artur: Sinna. Ja seal ei olnud mitte midagi.
+
+10
+00:00:51.745 --> 00:00:52.010
+Siim: Ee.
+
+11
+00:00:52.235 --> 00:00:52.460
+Artur: Muud.
+
+12
+00:00:52.780 --> 00:00:53.420
+Siim: Siis. Ee.
+
+13
+00:00:54.006 --> 00:00:54.580
+Artur: Tasub kujutada.
+
+14
+00:00:54.932 --> 00:00:56.340
+Siim: Kirjutada ette. Kui kastina.
+
+15
+00:00:57.137 --> 00:00:57.759
+Siim: Millal on, siis.
+
+16
+00:00:58.135 --> 00:00:58.510
+Artur: Nimi.
+
+17
+00:00:59.543 --> 00:01:00.730
+Artur: Ee, sisu.
+
+18
+00:01:01.735 --> 00:01:06.119
+Artur: Ning Aa. Siin. Me näeme, et meil on siis tehtud. Siis, ee.
+
+19
+00:01:06.340 --> 00:01:06.560
+Siim: Visuaalise.
+
+20
+00:01:06.815 --> 00:01:08.350
+Artur: Investeerimine. Kuidas seda võiks ette kujutada?
+
+21
+00:01:08.560 --> 00:01:08.980
+Siim: Tulevad, siis.
+
+22
+00:01:09.335 --> 00:01:09.690
+Artur: Nimi.
+
+23
+00:01:10.551 --> 00:01:14.139
+Artur: See, et nimeks võib olla ükskõik mis. Mis sõna.
+
+24
+00:01:14.542 --> 00:01:15.689
+Siim: Sisu. Täpselt samuti.
+
+25
+00:01:15.986 --> 00:01:16.580
+Artur: Et siin.
+
+26
+00:01:16.932 --> 00:01:19.389
+Siim: On siis sees String Ning.
+
+27
+00:01:19.840 --> 00:01:28.159
+Artur: Tüüp on üleval, vasakul nurgas. Nähtav. Et siis selline konkreetne näide, et miks teil on vaja,
+
+28
+00:01:28.563 --> 00:01:30.349
+Artur: et üks asi on siis, see, et programm.
+
+29
+00:01:30.544 --> 00:01:31.129
+Siim: Ei, unusta, on.
+
+30
+00:01:31.606 --> 00:01:32.560
+Artur: Ei unusta.
+
+31
+00:01:32.852 --> 00:01:37.649
+Siim: Tunned jäävad alles, et kuni neid on vaja, et nad on siis korduvkasutatavad.
+
+32
+00:01:37.910 --> 00:01:38.169
+Artur: Vot.
+
+33
+00:01:39.872 --> 00:01:42.619
+Siim: Ee, saab, ee, mitmetes kohtades kasutada. Nii.
+
+34
+00:01:42.825 --> 00:01:43.850
+Artur: Nii palju, kui on vaja.
+
+35
+00:01:45.376 --> 00:01:46.910
+Siim: Ning. Aa.
+
+36
+00:01:47.345 --> 00:01:49.289
+Artur: Tundlikud saab muuta väärtust.
+
+37
+00:01:49.980 --> 00:01:50.510
+Siim: Vastavalt.
+
+38
+00:01:50.975 --> 00:01:53.280
+Artur: Teadusele ja Projekt.
+
+39
+00:01:53.680 --> 00:01:54.080
+Siim: Eesmärgist.
+
+40
+00:01:56.680 --> 00:01:57.030
+Artur: Ning.
+
+41
+00:01:57.448 --> 00:02:00.799
+Siim: Ee, siin me näeme siis. Ee, samuti ka.
+
+42
+00:02:01.050 --> 00:02:01.300
+Artur: Ja.
+
+43
+00:02:01.495 --> 00:02:01.690
+Siim: Teisi.
+
+44
+00:02:02.090 --> 00:02:02.490
+Artur: Puuteid.
+
+45
+00:02:03.046 --> 00:02:03.640
+Siim: On siis.
+
+46
+00:02:03.823 --> 00:02:04.190
+Artur: Ee, ei.
+
+47
+00:02:04.683 --> 00:02:08.070
+Siim: Ehk interior, et selleks on siis number.
+
+48
+00:02:09.715 --> 00:02:12.579
+Artur: Aa, pöörame tähelepanu sellele.
+
+49
+00:02:12.676 --> 00:02:13.060
+Siim: Et see on. Ee.
+
+50
+00:02:13.375 --> 00:02:13.690
+Artur: Number.
+
+51
+00:02:14.098 --> 00:02:16.140
+Siim: Ee, kumada. Ehk siis taisi.
+
+52
+00:02:16.435 --> 00:02:16.730
+Artur: Surv.
+
+53
+00:02:17.954 --> 00:02:19.020
+Siim: Ee, string on.
+
+54
+00:02:19.442 --> 00:02:20.710
+Artur: Siis. Aa sõna.
+
+55
+00:02:21.058 --> 00:02:22.550
+Siim: Mitte sümbol, vaid täis sõna.
+
+56
+00:02:22.840 --> 00:02:23.130
+Artur: Jah.
+
+57
+00:02:24.122 --> 00:02:26.420
+Siim: Ning, ee, puul on siis, kui.
+
+58
+00:02:26.690 --> 00:02:26.960
+Artur: Mhm.
+
+59
+00:02:28.245 --> 00:02:28.950
+Siim: Kui küsimus, Kas.
+
+60
+00:02:29.120 --> 00:02:29.460
+Artur: Ee, jah.
+
+61
+00:02:29.790 --> 00:02:31.110
+Siim: Jõi, et Falls või.
+
+62
+00:02:31.400 --> 00:02:31.690
+Artur: Tšau.
+
+63
+00:02:34.670 --> 00:02:40.439
+Siim: Ja siin, ee. Meil on siis mugavalt toodud. Ee, näide.
+
+64
+00:02:41.056 --> 00:02:41.530
+Artur: Et ee.
+
+65
+00:02:41.911 --> 00:02:43.819
+Siim: Kuidas tasub siis neid vaadata?
+
+66
+00:02:44.965 --> 00:02:45.220
+Artur: Et.
+
+67
+00:02:45.790 --> 00:02:48.809
+Siim: Aa, tüüp. On meil siis siin antud? Ee.
+
+68
+00:02:49.120 --> 00:02:49.740
+Artur: Ee näitab.
+
+69
+00:02:50.485 --> 00:02:52.420
+Siim: Integer Mille.
+
+70
+00:02:52.610 --> 00:02:52.800
+Artur: Niimoodi.
+
+71
+00:02:53.163 --> 00:02:57.349
+Siim: On aasta ning ee. Väärtuseks on kaks tuhat, kakskümmend kuus.
+
+72
+00:02:58.206 --> 00:03:03.909
+Siim: Ja. Aga siin me toome teile välja, et Ee. Iga Rida peab lõppema, Siis ee. Semikoloniga.
+
+73
+00:03:04.576 --> 00:03:04.950
+Artur: Muidu vist.
+
+74
+00:03:05.463 --> 00:03:06.490
+Siim: Sündaks eurorit,
+
+75
+00:03:10.523 --> 00:03:13.059
+Siim: Nagu ma enne mainisin. Jah, et hind on täis Arv.
+
+76
+00:03:13.688 --> 00:03:17.869
+Siim: Näided on siin. Saame ikka ringi kohta ning ka.
+
+77
+00:03:18.626 --> 00:03:21.350
+Artur: Puuri on Lisaks.
+
+78
+00:03:21.737 --> 00:03:22.899
+Siim: Kas Neil on.
+
+79
+00:03:23.096 --> 00:03:23.489
+Artur: Raamatus ka.
+
+80
+00:03:23.766 --> 00:03:24.870
+Siim: Teised on nii tüübid.
+
+81
+00:03:26.270 --> 00:03:26.930
+Siim: Aa.
+
+82
+00:03:28.001 --> 00:03:30.559
+Artur: Näiteks double puhul on tähtis.
+
+83
+00:03:30.975 --> 00:03:31.390
+Siim: Teades.
+
+84
+00:03:31.635 --> 00:03:33.109
+Artur: Seda, et näiteks kui teil on.
+
+85
+00:03:33.620 --> 00:03:36.879
+Siim: Mingisugune kõige lihtsam näide on mingisugune.
+
+86
+00:03:37.036 --> 00:03:37.350
+Artur: Ee, tehnika.
+
+87
+00:03:37.611 --> 00:03:39.439
+Siim: Kus te peate jagama Ja on Aa.
+
+88
+00:03:40.684 --> 00:03:43.240
+Artur: Tõenäosus, et vastus tuleb koomakarv.
+
+89
+00:03:43.807 --> 00:03:44.430
+Siim: Et siis tasub.
+
+90
+00:03:44.896 --> 00:03:45.830
+Artur: Ee, vastuse
+
+91
+00:03:46.589 --> 00:03:53.059
+Artur: ee. Väärtuseks panna, et et see on kindlasti tabul. Mitte integer, muidu integeri puhul. Te ei anna sulle.
+
+92
+00:03:53.797 --> 00:03:56.160
+Siim: Ee, õiget väärtust. Ehk siis, kui sa.
+
+93
+00:03:56.334 --> 00:03:56.510
+Artur: Jagavad.
+
+94
+00:03:57.104 --> 00:04:00.180
+Siim: Viie kahega. Sa peaksid saama kaks koma viis.
+
+95
+00:04:00.865 --> 00:04:02.100
+Siim: Aga kui sul väljundiks on pannud.
+
+96
+00:04:02.497 --> 00:04:06.020
+Artur: Aa, intega, siis ta peaks andma kahe.
+
+97
+00:04:06.930 --> 00:04:07.320
+Artur: Aga kui sa.
+
+98
+00:04:07.583 --> 00:04:09.689
+Siim: Kui ma läheksid tabul, siis sa saad kaks.
+
+99
+00:04:09.971 --> 00:04:12.230
+Artur: Koma Viis nagu õigel moel kätte.
+
+100
+00:04:14.420 --> 00:04:22.330
+Siim: Ee, ee, Siis on Char. Siis on üks täht. Üks märk.
+
+101
+00:04:22.520 --> 00:04:22.710
+Artur: Jah.
+
+102
+00:04:23.047 --> 00:04:25.409
+Siim: Toodud, et saab kasutada. Näiteks siin täna.
+
+103
+00:04:25.975 --> 00:04:27.159
+Siim: Ee, tuleb veel.
+
+104
+00:04:27.547 --> 00:04:28.710
+Artur: Et ee. Käib.
+
+105
+00:04:29.376 --> 00:04:30.710
+Siim: Ee, jutud.
+
+106
+00:04:30.880 --> 00:04:31.050
+Artur: Märke.
+
+107
+00:04:31.235 --> 00:04:31.420
+Siim: Ee.
+
+108
+00:04:32.020 --> 00:04:36.330
+Artur: See täht või märk, milline siia tulebki.
+
+109
+00:04:37.345 --> 00:04:37.720
+Artur: Ee.
+
+110
+00:04:39.160 --> 00:04:40.540
+Siim: Ühekordsete jutumärkide.
+
+111
+00:04:41.870 --> 00:04:42.280
+Siim: Ee.
+
+112
+00:04:42.599 --> 00:04:45.159
+Artur: Mis on väga suur täisarv. Noh, siin on.
+
+113
+00:04:45.443 --> 00:04:46.009
+Siim: Näitena sealt.
+
+114
+00:04:46.416 --> 00:04:47.230
+Artur: Näiteks rahvaarvu.
+
+115
+00:04:47.440 --> 00:04:47.859
+Siim: Praegu või.
+
+116
+00:04:48.090 --> 00:04:48.320
+Artur: Vähemalt.
+
+117
+00:04:48.643 --> 00:04:49.289
+Siim: Vahemaa puhul.
+
+118
+00:04:49.436 --> 00:04:49.729
+Artur: Ee, kas.
+
+119
+00:04:50.146 --> 00:04:50.980
+Siim: Ee, kasutada.
+
+120
+00:04:52.620 --> 00:04:58.659
+Siim: Ee, ning load, mis on, ee, väiksem kümnende arv näiteks, noh. Nagu, i
+
+121
+00:05:03.271 --> 00:05:08.959
+Siim: Noh. Siin, on toodud koodi Näide eelpool mainitud siis integer.
+
+122
+00:05:09.995 --> 00:05:11.900
+Siim: Ee, String Poolion.
+
+123
+00:05:12.686 --> 00:05:19.690
+Siim: Ning ee. Kuidas see siis Ee lõpuks konsoolis välja prinditakse? Siinkohal on toodud väljundiks Tallinn,
+
+124
+00:05:25.208 --> 00:05:27.149
+Siim: kuidas arvuti mälus välja näeb.
+
+125
+00:05:27.971 --> 00:05:29.899
+Siim: Noh, iga muutuja on üks kast
+
+126
+00:05:30.837 --> 00:05:35.500
+Siim: mälus. Näiteks nagu aasta. Näitena kaks, tuhat, kakskümmend kuus
+
+127
+00:05:36.648 --> 00:05:48.140
+Siim: ee. String tekstifailina taaskord kahekordsetes jutumärkides Tallinn ning ee, two Wait Force Mm
+
+128
+00:05:54.153 --> 00:05:57.660
+Siim: Ning. Ee nagu enne mainisime et, väärtust saab muuta.
+
+129
+00:05:58.573 --> 00:05:58.979
+Artur: Et ee.
+
+130
+00:05:59.512 --> 00:06:03.240
+Siim: Ongi siis muuta eripära, et vastavalt vajadustele,
+
+131
+00:06:05.057 --> 00:06:11.640
+Siim: et aastast kaks tuhat, kakskümmend, kuus. Saame muuta Kakstuhat kakskümmend, seitse ja nii edasi ka muudeks väärtusteks.
+
+132
+00:06:12.463 --> 00:06:15.500
+Siim: Et siis lihtsasti manipuleeritavad, on need muutujad.
+
+133
+00:06:19.590 --> 00:06:19.890
+Artur: Ning.
+
+134
+00:06:20.556 --> 00:06:21.710
+Siim: Lihtne kokkuvõte.
+
+135
+00:06:22.583 --> 00:06:23.570
+Artur: Muutujate kohta.
+
+136
+00:06:24.086 --> 00:06:30.019
+Siim: Et seda tasub siis ette kujutada Kastina väärtuste nimega ja.
+
+137
+00:06:30.832 --> 00:06:32.360
+Artur: Kogu kogu muu sisuga.
+
+138
+00:06:33.303 --> 00:06:37.090
+Siim: Aa, koolima põhilist tüüpi, millega me kokku puutume.
+
+139
+00:06:37.665 --> 00:06:38.580
+Siim: Ind, String ja.
+
+140
+00:06:39.113 --> 00:06:41.599
+Artur: Puule on ning ee.
+
+141
+00:06:41.941 --> 00:06:43.649
+Siim: Ee, jällegi ka see, et.
+
+142
+00:06:44.626 --> 00:06:47.010
+Artur: Neid saab muuta vastavalt vajadustele.
+
+143
+00:06:48.006 --> 00:06:49.289
+Artur: Ja nii lihtne see ongi.
+
+144
+00:06:51.445 --> 00:06:52.119
+Siim: Ja nii lihtne see on.
+
+145
+00:06:52.425 --> 00:06:52.730
+Artur: Midagi.
+
+146
+00:06:54.426 --> 00:06:55.060
+Siim: Küsimus siis.
+
+147
+00:06:55.350 --> 00:06:55.640
+Artur: Mhmh.
+
+148
+00:06:56.375 --> 00:06:56.690
+Siim: Küsimusele.
+
+149
+00:06:57.066 --> 00:06:57.820
+Artur: Kuulaja kuulaja.
+
+150
+00:06:58.116 --> 00:06:58.710
+Siim: Kohta endale.
+
+151
+00:06:59.039 --> 00:07:00.930
+Artur: Ee, Ruby. Force.
+
+152
+00:07:01.530 --> 00:07:03.850
+Siim: Kas see saab olla ka üks ja null?
+
+153
+00:07:05.048 --> 00:07:10.050
+Siim: Sa võid anda neile nii palju, kui ma saan aru nii palju Kui ma tean, sa võid anda neile hindad väärtust.
+
+154
+00:07:10.302 --> 00:07:11.060
+Artur: Ma võtan selle.
+
+155
+00:07:11.368 --> 00:07:16.919
+Siim: Ee, nii kui sa tahad, et see oleks, et kasvõi eestikeelselt jah või ei, või venekeelselt? Inglise keelselt.
+
+156
+00:07:17.606 --> 00:07:22.520
+Siim: Ma ei tea, aga ee, koodi siis kindlasti. Noh,
+
+157
+00:07:23.400 --> 00:07:26.199
+Siim: kui pahes on ikkagi Fulls. Selles mõttes.
+
+158
+00:07:28.780 --> 00:07:35.929
+Siim: Vot või kui ma. Kui keegi tahab paremini, äkki keegi parandab mind.
+
+159
+00:07:36.313 --> 00:07:37.080
+Artur: Mulje ongi.
+
+160
+00:07:37.430 --> 00:07:42.680
+Siim: Taga Taustal täies ongi. Lähed umbes üks, kui null. Arvuti teab seda. Kujuta nulli, Aga
+
+161
+00:07:43.523 --> 00:07:49.750
+Siim: see on nagu see faas, Onju Või võib ka raskemaks minna. Võib ka seda muuta, Nagu ma enne mainisin. Sul on vaja.
+
+162
+00:07:50.555 --> 00:07:52.229
+Artur: Või ei ole. Ee, siin.
+
+163
+00:07:52.590 --> 00:07:53.310
+Siim: Kasutust, lood.
+
+164
+00:07:53.643 --> 00:07:55.980
+Artur: Määrab selle, kuidas see välja sulle paistab.
+
+165
+00:07:56.337 --> 00:08:00.050
+Siim: Kui välja, Kui väljundina. Selles mõttes Jah, alguses ikka.
+
+166
+00:08:00.352 --> 00:08:01.260
+Artur: Jah, nullid. Ühed.
+
+167
+00:08:01.599 --> 00:08:02.279
+Siim: Trup. Otsid.
+
+168
+00:08:04.715 --> 00:08:04.990
+Artur: Jah.
+
+169
+00:08:07.006 --> 00:08:08.100
+Siim: Tundub kõik
+
+170
+00:08:18.610 --> 00:08:19.630
+Siim: näoga.
+
+171
+00:08:22.416 --> 00:08:22.990
+Artur: Mis, Palun.
+
+172
+00:08:23.240 --> 00:08:23.740
+Siim: Küsimus taga.
+
+173
+00:08:31.414 --> 00:08:33.339
+Artur: Nii meie siis tutvustame If. I ja.
+
+174
+00:08:34.135 --> 00:08:34.929
+Siim: Tingimusi.
+
+175
+00:08:35.450 --> 00:08:35.950
+Artur: Ja avas,
+
+176
+00:08:39.661 --> 00:08:45.190
+Artur: et, ee, siis suuresti. Ee, kontrollib.
+
+177
+00:08:45.672 --> 00:08:49.369
+Siim: Kas ee, tõene või väär on tingimus,
+
+178
+00:08:50.253 --> 00:08:53.360
+Siim: et see annab ee programmile, siis paindlikkuse.
+
+179
+00:08:53.892 --> 00:08:54.440
+Artur: Ja saab reaalselt.
+
+180
+00:08:54.760 --> 00:08:55.079
+Siim: Reageerida.
+
+181
+00:08:55.722 --> 00:08:57.649
+Artur: Erinevatele olukordadele vastavad.
+
+182
+00:09:01.168 --> 00:09:02.509
+Siim: Leil ei ole slaidi Vist.
+
+183
+00:09:02.740 --> 00:09:03.200
+Artur: Ei ole.
+
+184
+00:09:03.983 --> 00:09:04.770
+Siim: Esikas sai.
+
+185
+00:09:04.977 --> 00:09:05.599
+Artur: Kinni sööd. Vä.
+
+186
+00:09:06.623 --> 00:09:12.040
+Siim: Slaidi, Seanss, jah.
+
+187
+00:09:12.795 --> 00:09:13.370
+Artur: Ee.
+
+188
+00:09:13.662 --> 00:09:14.540
+Siim: Mida teie näete?
+
+189
+00:09:17.430 --> 00:09:21.290
+Siim: Vau, nüüd lõikad või?
+
+190
+00:09:22.130 --> 00:09:23.150
+Artur: Ootame seda.
+
+191
+00:09:24.427 --> 00:09:27.420
+Siim: Aa, ma tean, milles probleem võib olla.
+
+192
+00:09:28.704 --> 00:09:31.020
+Siim: Okei, tal on see ilmselt tööd. On.
+
+193
+00:09:31.199 --> 00:09:31.559
+Artur: Jah, tsau.
+
+194
+00:09:32.537 --> 00:09:35.469
+Siim: Peab tegema selle.
+
+195
+00:09:36.780 --> 00:09:43.060
+Siim: Aa, kas. Oot, oot, oot, kus on? Ee.
+
+196
+00:09:44.994 --> 00:09:46.490
+Artur: Mis see asi on.
+
+197
+00:09:46.723 --> 00:09:47.190
+Siim: Olge Ääres.
+
+198
+00:09:48.060 --> 00:09:51.059
+Artur: Issand, ma lõpetan korruseerimise.
+
+199
+00:09:54.073 --> 00:10:03.720
+Artur: Tee see, sest me panime jagama vale asja.
+
+200
+00:10:05.818 --> 00:10:09.770
+Artur: Nii, nii teete päris slide Cool
+
+201
+00:10:15.270 --> 00:10:21.079
+Artur: Paneme Nii, Jäta, Ja kõigepealt siis vaatame
+
+202
+00:10:26.903 --> 00:10:31.990
+Artur: selle. Sales siit.
+
+203
+00:10:34.745 --> 00:10:41.860
+Artur: Ei, nii et If tingimust ee, üksikult.
+
+204
+00:10:43.231 --> 00:10:48.250
+Artur: Ja ee, siin puhul, siis ongi lihtsalt vaadatakse, et Kas
+
+205
+00:10:49.176 --> 00:10:53.560
+Artur: ee tingimus on ee, õige või väär?
+
+206
+00:10:55.220 --> 00:11:00.329
+Artur: Ja kui tingimus on true, siis käivitatakse ka vastav koodiblokk
+
+207
+00:11:00.877 --> 00:11:03.520
+Artur: Ja seda ainult juhul, kui tingimus on,
+
+208
+00:11:04.253 --> 00:11:10.670
+Artur: et praegusel juhul siin all koodi näites Ee, on näha olukord,
+
+209
+00:11:11.815 --> 00:11:29.059
+Artur: kus muutuja väärtus on viis ja meie tingimuseks on, et ee, hinne Kreid peaks olema suurem või võrdne kolmest. Kuna meie muutuja on viis, siis tulemuseks rehkendub true
+
+210
+00:11:29.647 --> 00:11:31.230
+Artur: ja prindime välja.
+
+211
+00:11:32.115 --> 00:11:38.670
+Artur: Ee, konsooli positiivne hinne, aga Seda ainult juhul,
+
+212
+00:11:39.430 --> 00:11:55.120
+Artur: kui meile tingimus on. Vastupidi, me jätaksime selle osa vahele ja hüppaksime niiöelda üle. Midagi ei juhtuks. Ehk siis kõigepealt vaatab selle sulu sisu. Ja siis sealt tuleb Kas True False? Välja
+
+213
+00:11:55.512 --> 00:12:00.219
+Artur: See puuline väärtus ja siis If vaatab seda ja teeb otsuse vastavalt
+
+214
+00:12:02.092 --> 00:12:16.340
+Artur: siis Ee, kasutamise Ee võrdlust. Ee, Kasutatakse operaatoreid, et suurem väiksem võrdne, mittevõrdne või siis kombineeritult Suurem. Võrdne, väiksem võrdne.
+
+215
+00:12:18.032 --> 00:12:22.229
+Artur: Seal on ka väga palju teisi valikuid. Sa võid seda true panna. Siis on alati tõsi.
+
+216
+00:12:23.694 --> 00:12:24.829
+Artur: See On vähegi lubatud.
+
+217
+00:12:26.062 --> 00:12:35.510
+Artur: Ee, nüüd lähme edasi. Kus me lisame juurde ee Variandi Els. Ehk kui if tingimus on vale,
+
+218
+00:12:36.293 --> 00:12:46.240
+Artur: et mida me, siis Mis siis juhtub, et esimene If tingimus on praegusel juhul vale, kuna Greyd on kaks
+
+219
+00:12:47.495 --> 00:12:56.289
+Artur: ja me läheme üle ee printimise võimalus võimalusest. Positiivne hinne ja kasutame
+
+220
+00:12:57.239 --> 00:13:06.350
+Artur: ee. Iga kord, Kui ee. On tulemus kasutame Els Väljaprindi võimalust. Ehk siis, et kõik muu.
+
+221
+00:13:07.436 --> 00:13:15.249
+Artur: Mis, Ee, meil tuleb. Ee, edasi. Prindime välja. Negatiivne hinne.
+
+222
+00:13:26.694 --> 00:13:32.599
+Artur: Ee, nüüd lähme edasi. Kus on Ee variant, et me anname rohkem võimalusi.
+
+223
+00:13:33.581 --> 00:13:41.890
+Artur: Me tahame rohkem lahti arutada seda ee koodijuppi ja lisame lisatingimuse
+
+224
+00:13:42.856 --> 00:13:47.319
+Artur: Ee Ifi ja Els vahele lisatingimus on Else If.
+
+225
+00:13:48.868 --> 00:13:51.499
+Artur: Neid võib olla üks. Neid võib olla mitu,
+
+226
+00:13:52.517 --> 00:13:55.510
+Artur: aga need asuvad Ifi ja Elsi vahel.
+
+227
+00:13:57.779 --> 00:14:09.799
+Artur: Ja praegusel juhul on tähtis teada, et Ee, liigume alati ülevalt alla kuni esimese tingimuseni ja all. Oleval näitel
+
+228
+00:14:10.950 --> 00:14:17.380
+Artur: on siis näha, et True tingimus saab täidetud teise
+
+229
+00:14:18.282 --> 00:14:26.489
+Artur: rea juures ja välja. Prindime rahuldav ja edasi enam ei lähe, Kuna meie truu tulemus on olemas.
+
+230
+00:14:31.132 --> 00:14:34.050
+Artur: Ee, eluline näide valgusfoor.
+
+231
+00:14:36.074 --> 00:14:44.250
+Artur: Ee, roheline, kollane punane Ifels Ifels Ja viimane Els, kui
+
+232
+00:14:44.947 --> 00:14:55.400
+Artur: ükski neist varasematest ei ole täidetud, kas foor on katki vilgub Kollane või mingi muu ettenägematu olukord?
+
+233
+00:14:56.402 --> 00:15:10.580
+Artur: Ee, Räägime selle läbi ka et siis lillad või mis iganes on, siis meie, need ee, If ja Ifels ja need, ee, väited, siis rohelisega, on see, Mida me kontrollime
+
+234
+00:15:11.338 --> 00:15:19.949
+Artur: ja sinisega. Siis on see programm, mis käivitub, et see on, ee, meie väike programm kirjutada eesti keeles
+
+235
+00:15:27.865 --> 00:15:37.459
+Artur: ja kokkuvõtteks kõige Olulisem ongi See, et ee. Kontroll toimub, liigub alati ülevalt alla, kuni esimese true tingimuseni.
+
+236
+00:15:39.051 --> 00:15:41.939
+Artur: Ja esimene true tingimus määrab ka siis tulemuse
+
+237
+00:15:42.649 --> 00:15:48.519
+Artur: ee Millist koodiblokki me kasutame? Ehk siis esimest true tingimusele vastavat koodiblokki.
+
+238
+00:15:53.270 --> 00:15:55.279
+Artur: Aitäh, palun küsimusi.
+
+239
+00:16:02.610 --> 00:16:04.570
+Artur: Väga hea.
+
+240
+00:16:08.990 --> 00:16:09.530
+Artur: Ee.
+
+241
+00:16:10.314 --> 00:16:24.179
+Artur: Nii, meie räägime siis loogilistest operaatoritest et Ee, kasutatakse ka Aa palju If ja Ifelsiga. Ee, loogilised operaatorid
+
+242
+00:16:29.582 --> 00:16:31.879
+Artur: annavad tulemuseks. Kas true või folks?
+
+243
+00:16:32.656 --> 00:16:38.840
+Artur: Et ee, neil olid ee. Operaatorid üldiselt Võivad ee
+
+244
+00:16:39.913 --> 00:16:47.190
+Artur: anda. No, võrdusmärgid. Suurem võrdne on ja võivad anda erinevaid väärtusi. Aga loogilised operaatorid annavad ainult True ja Falls,
+
+245
+00:16:51.362 --> 00:16:52.530
+Artur: neid on kolm Tükki.
+
+246
+00:16:54.026 --> 00:16:58.490
+Artur: Ee and or ja not. Ja need on suht Self,
+
+247
+00:16:59.342 --> 00:17:02.509
+Artur: et ee, änd on eesti keeles ja
+
+248
+00:17:03.200 --> 00:17:07.919
+Artur: ehk siis, kui näiteks kaks tingimust, Oleme lapsevanem.
+
+249
+00:17:08.579 --> 00:17:11.229
+Artur: Ee, laps tuleb. Koju Küsib.
+
+250
+00:17:11.990 --> 00:17:13.189
+Artur: Sa oled range lapsevahem.
+
+251
+00:17:13.748 --> 00:17:15.090
+Artur: Kas Ma võin arvutis mängida?
+
+252
+00:17:15.848 --> 00:17:22.579
+Artur: Siis teemegi Näiteks Sihtingimuse Kui kodutööd on tehtud Jaa,
+
+253
+00:17:23.315 --> 00:17:28.290
+Artur: tuba on korras. Siis võid arvutisse mängima minna. Ehk siis Ja tähendab, et ee.
+
+254
+00:17:29.052 --> 00:17:31.139
+Artur: Mõlemad tingimused peavad andma.
+
+255
+00:17:31.922 --> 00:17:36.019
+Artur: Mõlemad peavad andma truu, siis Tuleb kokku turu.
+
+256
+00:17:40.017 --> 00:17:45.530
+Artur: Mm, või tingimus on. Ee. Ehk siis ori. Tingimus on paindlikum,
+
+257
+00:17:46.726 --> 00:17:50.540
+Artur: ee kasutatakse sellistes olukordades. Kus sul, on, Ee,
+
+258
+00:17:51.259 --> 00:17:54.399
+Artur: ongi rohkem paindlikkust vaja, et rohkem variante võiks olla
+
+259
+00:17:55.705 --> 00:17:57.359
+Artur: kui laps. Kui sa oled nagu
+
+260
+00:17:57.944 --> 00:18:07.049
+Artur: leebem lapsevanem, et ütled talle, et tee kas tuba korda või kooli ajused ära. Kumb, et, ee. Kui lapsel on koolikodud tehtud või tuba korras,
+
+261
+00:18:07.506 --> 00:18:08.690
+Artur: siis võib arvutis mängida.
+
+262
+00:18:10.276 --> 00:18:12.860
+Artur: Ja kolmas variant on ee
+
+263
+00:18:14.476 --> 00:18:24.099
+Artur: not, tingimus. Seda kasutatakse ee vastupidi Enamasti vist vastupidise testimiseks et kui sul on näiteks If tingimus
+
+264
+00:18:25.517 --> 00:18:28.019
+Artur: ilmailsita et sul on lihtsalt ihtingimus
+
+265
+00:18:30.409 --> 00:18:35.999
+Artur: ee ja Sa saad selle vastuseks. Oletame, et see kehtib. Sa saad ühe vastuse, et kui
+
+266
+00:18:37.268 --> 00:18:44.419
+Artur: siis ta teeb ühte asja, Aga kui sa tahad kontrollida, Et, Ee, Mis juhtub siis, kui ee.
+
+267
+00:18:45.197 --> 00:18:57.669
+Artur: Ei oleks? True, et kas kõik. On korras, siis sa paned sinna noti asemel notisümbol jaavas hüüumärk Nagu slaidilt näha. Paned sinna hüüumärgi ette ja vaatad, et kas siis ka kõik töötab, kui see tingimus peaks muutuma?
+
+268
+00:19:01.320 --> 00:19:11.179
+Artur: Jah, ja siin on Ee, tabel ee jäätingimuse kohta. Ja siin on kirjas. Ee, kuidas. Ee,
+
+269
+00:19:11.971 --> 00:19:18.710
+Artur: ee. Teine on? Ainult siis, kui mõlemad tingimused on tees, et, ee, Kui näiteksingimus.
+
+270
+00:19:19.275 --> 00:19:27.289
+Artur: Aa ja B on true, õige, et siis ee tulemus on õige. Kui A on õige ja B
+
+271
+00:19:27.828 --> 00:19:34.350
+Artur: ei ole, kes siis Ee, tulemus. Ee väär. Ja kui Aa
+
+272
+00:19:35.309 --> 00:19:51.419
+Artur: vääri ja B on õige, siis ee. Lõpptulemus on ee, väär. Ja kui ja viimane Ee neljas Ee, võimalus. Kui A on väär ja on väär, siis on ee tulemus. Väär.
+
+273
+00:19:53.000 --> 00:19:53.410
+Artur: Jah,
+
+274
+00:19:56.612 --> 00:20:01.110
+Artur: ja siis, ee, järgmine. Operaator või Ee
+
+275
+00:20:02.320 --> 00:20:08.239
+Artur: Ja ta On ee, teine. Ainult siis, kui vähemalt üks tingimus on tõene.
+
+276
+00:20:09.216 --> 00:20:12.150
+Artur: Ja praegu ka siin on neli võimalust. Ee,
+
+277
+00:20:13.166 --> 00:20:22.560
+Artur: aa, Kui A, on õige ja B, õige, siis tulemus on õige. Ja Kui A. Õige ja B on väär, siis Ee,
+
+278
+00:20:23.196 --> 00:20:30.420
+Artur: Tulemas on ka õige ja kui A on väär ja B on õige, siis on õige.
+
+279
+00:20:31.122 --> 00:20:36.749
+Artur: Ja kui viimane A on õige ja B on õige, siis tulemas. Ee
+
+280
+00:20:37.265 --> 00:20:42.799
+Artur: aa, vabandust, Kui on väär ja on väär, siis tulemas on väär.
+
+281
+00:20:46.061 --> 00:20:48.319
+Artur: Ja siis viimane loogiline operaator.
+
+282
+00:20:48.996 --> 00:20:54.120
+Artur: Ee, mitte Ee, Mis pöörab väärtuse vastupidiseks.
+
+283
+00:20:55.505 --> 00:21:05.550
+Artur: Ee ja Vastupidi, jah. Nii, kes siis, et see on?
+
+284
+00:21:07.923 --> 00:21:23.650
+Artur: Ja siis võibolla kõige lihtsam on vaadata. Neid, ee, mis need tulemusi annavad, et ee änd on Siis niiöelda nõudlikum, onju, et, ee, mõlemad peavad olema truud, et ta annaks tulemuseks Truub ehk siis Ee ja Oril on, ee,
+
+285
+00:21:24.235 --> 00:21:29.869
+Artur: see Orr on siis paindlikum Ja Oril. Ainult see annab false, kui mõlemad on false.
+
+286
+00:21:31.418 --> 00:21:43.319
+Artur: Ja siin on näide jaava koodist. Ee, kus meil on Ee, aa, kuidas see on vä Int integer. Ee,
+
+287
+00:21:43.862 --> 00:21:46.399
+Artur: ehk siis. Meil on täis vanuses kakskümmend
+
+288
+00:21:46.883 --> 00:21:51.740
+Artur: Ee inimene Ee, Kes Kelle kohta on siis, et on õpilane, on truu.
+
+289
+00:21:53.517 --> 00:21:58.550
+Artur: Ja siis meil on siin ee, kolm tingimust. Kolm tingimust.
+
+290
+00:22:00.060 --> 00:22:00.650
+Artur: Ee,
+
+291
+00:22:04.521 --> 00:22:11.270
+Artur: esimene tingimus, et kui vanus on suurem võrdne Kaheksateistkümnega. Ja ta on õpilane. Siis prindime välja, et ta on täiskasvanud õpilane.
+
+292
+00:22:12.137 --> 00:22:25.350
+Artur: Teine tingimus on, et ee. Vanus on alla kaheksateistkümne või ta on õpilane, siis prindime välja, et kas ta on alaealine või õpilane Ja kolmas. Et Ee, Kui ta. Ei ole õpilane, siis ee, noh,
+
+293
+00:22:25.901 --> 00:22:27.710
+Artur: Prindin välja, et ei ole.
+
+294
+00:22:34.946 --> 00:22:47.080
+Artur: Kui nüüd vanus oleks kaheksateist ja on õpilane, oleks pools. Ee, milline neist kehtiks, mis ta prindib mitte midagi,
+
+295
+00:22:49.145 --> 00:22:49.560
+Artur: Mhmh,
+
+296
+00:22:54.732 --> 00:22:57.750
+Artur: ja ee. See on kogu muusika.
+
+297
+00:22:58.682 --> 00:23:02.910
+Artur: Ee, kas kellelgi on küsimusi? Ma arvan, et midagi jäi raudselt arusaamatuks.
+
+298
+00:23:03.702 --> 00:23:06.810
+Artur: Võibolla on nii lihtne teema, et mul Tundub küll. Et nagu.
+
+299
+00:23:07.300 --> 00:23:08.949
+Artur: Võibolla võiks rohkem teada, aga
+
+300
+00:23:12.436 --> 00:23:13.870
+Artur: küsimus ei ole. Aitäh teile.
+
+301
+00:23:17.464 --> 00:23:18.960
+Artur: Aitäh, et kohale tulite.
+
+302
+00:23:19.526 --> 00:23:27.280
+Artur: Rõõmsaid näha, et, ee, Kes veel ei tea. Ja nagu Riho ütles, siis meie teema on meetod
+
+303
+00:23:28.445 --> 00:23:30.049
+Artur: täpsemalt ja meetod.
+
+304
+00:23:31.229 --> 00:23:39.489
+Artur: Meetod on kontseptsioon. Ehk et see siis kehtib Igal pool aga hommiku poole räägitud. See just nii. Ja mis see meetod siis on?
+
+305
+00:23:40.151 --> 00:23:44.480
+Artur: Defitsio Definitsiooni poole pealt on see üks koodiblokk,
+
+306
+00:23:45.577 --> 00:23:56.750
+Artur: Ee, Mis on siis ükskord kirjutatud kuskile siis ee. Projekti algusesse. Mida siis saab pärast välja kutsuda? Ükskõik kus ee, koodis hiljem,
+
+307
+00:23:57.922 --> 00:24:01.660
+Artur: Ehk siis, ee Ja avas on see
+
+308
+00:24:03.285 --> 00:24:07.650
+Artur: ee jaos peaks ee koostama siis mingist klassist
+
+309
+00:24:08.580 --> 00:24:11.220
+Artur: ning see algab tavaliselt tüübi määramisega.
+
+310
+00:24:12.010 --> 00:24:22.660
+Artur: String Ee, void või integral ning Päriselu analoogia on Näiteks, kas see sama kohvimasin, mis meil koridoris on?
+
+311
+00:24:23.394 --> 00:24:29.559
+Artur: Ee, näiteks lähete kohvi tegema et te otsas, et ei pea teadma, Mis seal sees on? Kuidas see töötab,
+
+312
+00:24:30.054 --> 00:24:34.769
+Artur: et. Ee, kuidas see aparaat töötab? Siis vajutada nuppu ja siis te saate kohe tulemuse
+
+313
+00:24:35.223 --> 00:24:45.559
+Artur: Ehk et Parameetrid on see, et sa valid. Kas suur kohvi? Väike kohvi. Kange kohvi. Lahja kohvi Ehk et sa paned parameetrid, vajutad nuppu ja meetod on Siis see, mis seal suriseb
+
+314
+00:24:46.353 --> 00:24:49.519
+Artur: ja sülitab välja selle resultaadi.
+
+315
+00:24:50.444 --> 00:24:52.629
+Artur: Ja miks meetodid on üldse kasulikud?
+
+316
+00:24:53.387 --> 00:25:07.040
+Artur: Nagu te võite arvata, siis ee, see Projektis säästab tohutult palju aega, et üks inimene kirjutab mingi meetodi, mis teeb ühe kindla asja. Mingi Kindla ülesanne nimetab seda
+
+317
+00:25:07.564 --> 00:25:12.999
+Artur: ning kõik teised Programmeerijad saavad seda ükski millal, nagu välja kutsuda.
+
+318
+00:25:13.924 --> 00:25:18.370
+Artur: Ee, väga kompakteeritud. Ja väga lihtsalt ehk, et hoiab koodi puhtana
+
+319
+00:25:19.442 --> 00:25:30.319
+Artur: ja võimaldab hästi lihtsalt seda hooldada, et ei pea koodi sees parandusi tegema. Kui tahetakse parandada, vaid sa saad teha ühe korra paranduse selles meetodis, mis muudab siis kogu koodis.
+
+320
+00:25:31.235 --> 00:25:35.729
+Artur: Miks ei pea ülevalt alla edasitagasi käima? Vaid ühes ühes kohas? Muudad just
+
+321
+00:25:40.909 --> 00:25:50.779
+Artur: ee ning ee, näide koodiga. Et jaos määrame ma alati ära. Mis tüüpi andmeid meetod tagastab. Meie puhul on see integral, aga on ka teisi võimalusi.
+
+322
+00:25:51.376 --> 00:26:00.599
+Artur: Ee, näiteks nagu String Ee, Ja siis meie Näitel Me tegime väikse kalkulaatori, et ee, siin. Nagu näete,
+
+323
+00:26:01.187 --> 00:26:11.140
+Artur: et on Public Class, siis public on see, et seda saab ükskõik kust väljastpoolt, Ee, ee. Kooli kasutada,
+
+324
+00:26:11.761 --> 00:26:13.750
+Artur: et see on nagu avalik Niiöelda,
+
+325
+00:26:14.316 --> 00:26:19.990
+Artur: Ee, nii nagu te näete, et see esimene osa ongi. See ongi see
+
+326
+00:26:20.808 --> 00:26:31.529
+Artur: script Nagu kirjutatud ning arv. Üks pluss arv kaks. See on siis ee. Need muutujad, mida parameetrid just ja parameetrid, mida saab siis kasutada ise
+
+327
+00:26:32.440 --> 00:26:33.320
+Artur: Ee valida.
+
+328
+00:26:34.038 --> 00:26:38.520
+Artur: Ning ee, see alumine osa see ongi, et kus me
+
+329
+00:26:39.141 --> 00:26:46.299
+Artur: kutsume välja seda meetodit ning arv Ühe ja arv. Kahe asemel me Lisas kirjutasime sinna kümme kakskümmend
+
+330
+00:26:47.181 --> 00:26:58.430
+Artur: ning see viimane osa on see mis, me tagasi saame ehk. Siis lahes laastus on see kohvi mis, me Tahame ehk, et rommeerimine on antud näite puhul. Meetod.
+
+331
+00:26:58.957 --> 00:27:00.429
+Artur: Parameetrid on siis alg.
+
+332
+00:27:01.260 --> 00:27:08.710
+Artur: Ee, liidetavad ja tulemus on siis vastus, mis siis tekib pärast seda meetodi käivitamist.
+
+333
+00:27:09.748 --> 00:27:16.440
+Artur: See on siis koodi Näitena, see on kerge analoog. Kuidas me juba oleme kohvimasina kohta rääkinud,
+
+334
+00:27:17.976 --> 00:27:29.859
+Artur: et on peaprogramm kutsub meetodid Ee peale kasutaja sisestust A ja B Fun Ee parameetrit Siis Ee programm töötab
+
+335
+00:27:30.686 --> 00:27:39.589
+Artur: töötava andmeid tagastab tulemuse ja peaprogramm saab seda kasutada. Kohviga on väga sarnaselt siin välja toodud
+
+336
+00:27:42.443 --> 00:27:46.010
+Artur: ja tänan kuulamast küsimusi. Ettepanekuid
+
+337
+00:27:51.190 --> 00:27:54.250
+Artur: ei olnud nii arusaadav. Selgitatud ju.
+
+338
+00:27:58.508 --> 00:28:05.120
+Artur: No aga aga sel juhul ma homme Vaatan, kuidas. Ee, hakkame. Kuidas te kõik hakkate meetodeid kirjutama.
+
+339
+00:28:09.618 --> 00:28:12.550
+Artur: Meie räägime jaama klassidest ja objektidest.
+
+340
+00:28:14.996 --> 00:28:26.790
+Artur: Nii, ja klassid on siis objekti objekt, orienteeritud Programmeerimise alustala. Ja Põhimõtteliselt võib sellest mõelda. Et See on nagu blueprint või plaan.
+
+341
+00:28:27.780 --> 00:28:30.930
+Artur: Ja sellest plaanist saab siis luua objekte,
+
+342
+00:28:31.412 --> 00:28:37.410
+Artur: millel on siis oma. Mis on siis omaette is Ja ta sisaldab siis neid andmeid ja käitumist.
+
+343
+00:28:45.048 --> 00:28:57.759
+Artur: Ja me nüüd tegime sellise näite, mis oleks selline eluline näide, et Ee klassiks on siis retsept. Ja siis mis selle retsep retsepti põhjal teha saab? See objekt küpsised
+
+344
+00:29:00.997 --> 00:29:08.270
+Artur: ja siis sellest kood jah, Just
+
+345
+00:29:08.809 --> 00:29:13.000
+Artur: Siis koodi näide oleks, et. Ee, kui meil See klass on retsept.
+
+346
+00:29:13.686 --> 00:29:21.959
+Artur: Noh, retsepti nimi on küpsis On sellel ee noh. Kaks, väärtust Ee, maitse ja suurus.
+
+347
+00:29:22.693 --> 00:29:31.789
+Artur: Ja siis ka veel. Noh, näite puhul tõime välja ühe meetodi, millest just kuulsite. Kuidas sellest küpses küpsenõu küpsetatakse tehakse söödavaks,
+
+348
+00:29:35.607 --> 00:29:38.710
+Artur: et selline on siis ee objekt.
+
+349
+00:29:39.712 --> 00:29:42.129
+Artur: Teeme uue küpsise nimega k Üks.
+
+350
+00:29:43.028 --> 00:29:49.230
+Artur: Selle maitseks määrame. Šokolaadi ja suuruseks number viis olgu. Siis see diameeter
+
+351
+00:29:50.058 --> 00:29:53.010
+Artur: Ja siis paneme selle ahju, Ehk kutsume meetodi
+
+352
+00:29:54.746 --> 00:29:57.100
+Artur: ja ta näitab korra eelmise slaidi uuesti,
+
+353
+00:29:57.970 --> 00:30:03.279
+Artur: et ee, meetod nagu küpsetab sellise maitsega küpsise sellise suurusega.
+
+354
+00:30:04.255 --> 00:30:07.020
+Artur: Nii et meie konsooli näide tuleks siis praegu,
+
+355
+00:30:07.724 --> 00:30:10.870
+Artur: et küpsetasin šokolaad küpsise suurusega viis.
+
+356
+00:30:16.800 --> 00:30:23.499
+Artur: Jah No, Sa, oled ka hea kõige lihtsam esitas, et siiamaani. Kas on küsimusi?
+
+357
+00:30:27.047 --> 00:30:27.729
+Artur: Ma kuulen seda.
+
+358
+00:30:28.395 --> 00:30:28.730
+Artur: Mm,
+
+359
+00:30:32.080 --> 00:30:32.600
+Artur: nii.
+
+360
+00:30:33.705 --> 00:30:35.380
+Artur: Hakkame siis kohe pihta ja.
+
+361
+00:30:37.033 --> 00:30:43.430
+Artur: Ja. Ja meil see pealkiri oli siis teema, Eks ju,
+
+362
+00:30:44.408 --> 00:30:48.670
+Artur: konstruktor? Räägime kolmest asjast. Konstruktor Mis on?
+
+363
+00:30:49.524 --> 00:30:52.130
+Artur: Siis on getterid ja setter Id,
+
+364
+00:30:52.657 --> 00:30:58.739
+Artur: et alustame sellest Ee konstruktorist. Mis asi see on, See ongi see, kui sa lood siis objekti.
+
+365
+00:30:59.123 --> 00:31:00.970
+Artur: Ja kui sa mingi objekti nagu lood,
+
+366
+00:31:01.392 --> 00:31:05.140
+Artur: siis sa kohe annad talle ju algsed ee väärtused ka sisse, eksju?
+
+367
+00:31:06.422 --> 00:31:14.429
+Artur: Ja. Ja. Ja see ongi siis ee. Konstruktoriks, Nagu nimetatakse üldiselt objekti nagu sünnihetk,
+
+368
+00:31:15.202 --> 00:31:20.049
+Artur: et me loome selle objekti ja ja Kohalikesed väärtused. Noh, eluline näide. Kohe.
+
+369
+00:31:20.786 --> 00:31:26.360
+Artur: Inimene sünnib. Või? Beebi sünnib Nüüd me see sünni. Noh,
+
+370
+00:31:27.524 --> 00:31:30.429
+Artur: tunnistus. Sinna läheb ju tema nimi, sisse
+
+371
+00:31:30.912 --> 00:31:35.150
+Artur: et Tal peab olema nimi ilma selleta, nagu ei saa seda sünnitunnistust nagu teha.
+
+372
+00:31:36.170 --> 00:31:37.130
+Artur: Aga vaatame edasi.
+
+373
+00:31:39.892 --> 00:31:41.899
+Artur: Mis on siis getterid?
+
+374
+00:31:42.535 --> 00:31:46.010
+Artur: Jah, Setter Id siin on toodud välja et
+
+375
+00:31:46.790 --> 00:31:50.230
+Artur: et neid, ee, noh, kõige parem oleks kasutada
+
+376
+00:31:51.250 --> 00:31:58.110
+Artur: just siis privaatsete niiöelda muutujate väärtuste nii lugemiseks kui ka muutmiseks,
+
+377
+00:31:58.682 --> 00:32:01.149
+Artur: et Kui see muutuja on nagu privaatne
+
+378
+00:32:01.903 --> 00:32:11.669
+Artur: Ee, siis teised klassid ei saa nagu seda otseselt seda muuta. Ja selleks ongi sellised funktsioonid, nagu on Getterid ja setter Id
+
+379
+00:32:12.220 --> 00:32:23.740
+Artur: et kontrollida siis seda ligipääsu, Et, ee, ee, justkui siis need. Niiöelda Ee, see on sipil, et
+
+380
+00:32:24.395 --> 00:32:29.260
+Artur: hästi tundlikut infot Tundlik info. A La. Näiteks. Sa oled kuskil mängus.
+
+381
+00:32:30.098 --> 00:32:34.180
+Artur: Sa tahad muuta oma elusid? Näiteks Kümne tuhande peale
+
+382
+00:32:34.565 --> 00:32:38.420
+Artur: noh. Sa, ei saa seda teha sellepärast, et see oleks siis vahele
+
+383
+00:32:39.055 --> 00:32:46.590
+Artur: häkkimine, vaid cheetimine. Et sa ei saa, võib et veel elulisem pangakonto seal kümme eurot
+
+384
+00:32:47.288 --> 00:32:56.090
+Artur: ta. Ei saa muuta seda tunnust nüüd miljoni peale. Kuna ta on privaatne Ja ja siis
+
+385
+00:32:59.262 --> 00:33:02.000
+Artur: siin. Toome. Toome veel välja selle, et ee.
+
+386
+00:33:02.791 --> 00:33:05.850
+Artur: Miks siis peaks konstraktoreid kasutama.
+
+387
+00:33:06.371 --> 00:33:11.849
+Artur: Et kas konstraktoris peaks kasutama setlereid, et see see on siis see, et ee,
+
+388
+00:33:12.390 --> 00:33:17.800
+Artur: lihtne väärtus lihtne on seda väärtust nagu äärata hiljem.
+
+389
+00:33:18.862 --> 00:33:22.060
+Artur: Et, ee. Kui tahad lihtsalt väärtuse
+
+390
+00:33:23.364 --> 00:33:26.390
+Artur: algses määrata, siis kasuta otse muutujat.
+
+391
+00:33:27.512 --> 00:33:30.139
+Artur: Ja. Ja mis siin veel slaidil on, Et Ee,
+
+392
+00:33:30.890 --> 00:33:34.699
+Artur: setter Id on kasulikud siis, kui kui
+
+393
+00:33:35.735 --> 00:33:42.959
+Artur: enne salvestamist töödelda tahad seda väärtust enne salvestust töödelda ja tahad siis tulevikus seda loogikat ka muuta,
+
+394
+00:33:43.707 --> 00:33:51.640
+Artur: siis piisab Ainult setteri muutmisest mitte kogu koodi muutmisest, et ta on ka.
+
+395
+00:33:52.843 --> 00:33:55.709
+Artur: Teeb selle arendajale nagu mugavaks.
+
+396
+00:33:57.792 --> 00:33:59.089
+Artur: Võibolla jätab siis
+
+397
+00:34:04.175 --> 00:34:20.629
+Artur: Okei, ma olen siis ee jõudnud Encapsulation I juurde on objekt orienteeritud programmeerimises, Siis nagu privaatne.
+
+398
+00:34:21.562 --> 00:34:23.739
+Artur: Ee. Nagu ma sain õigesti aru.
+
+399
+00:34:25.784 --> 00:34:31.939
+Artur: Mm, ehk siis sellel teemal Ma ei Hakka
+
+400
+00:34:33.288 --> 00:34:38.039
+Artur: rohkem nagu siis selgitama. Järgmine laud tegeleb sellega edasi.
+
+401
+00:34:41.949 --> 00:34:44.999
+Artur: Nii, Getter, meetod.
+
+402
+00:34:47.961 --> 00:34:56.470
+Artur: Kas meil ei ole siin mõndasid Näiteid Oleks palju lihtsam, Okei, Nii allpool.
+
+403
+00:34:57.495 --> 00:34:57.960
+Artur: Nii
+
+404
+00:35:01.314 --> 00:35:02.809
+Artur: siin meil siis on.
+
+405
+00:35:04.096 --> 00:35:05.030
+Artur: Väikene näide.
+
+406
+00:35:07.363 --> 00:35:10.329
+Artur: Me oleme loonud konstraktoriga auto.
+
+407
+00:35:12.687 --> 00:35:24.570
+Artur: Tal on siin mingisugused väärtused. Nagu te näete nüüd, Setter, Kui ma siis kutsun esile setteri meetodit,
+
+408
+00:35:25.670 --> 00:35:31.349
+Artur: siis ta muudab siin mõne väärtuse.
+
+409
+00:35:33.525 --> 00:35:34.470
+Artur: On see arusaadav?
+
+410
+00:35:37.745 --> 00:35:49.099
+Artur: Noogutati, kas ei ole üldse või siis kõik Said hästi aru, super. Mm, ja getter on. Siis
+
+411
+00:35:50.628 --> 00:36:01.910
+Artur: on siis, kui sa soovid saada seda väärtust sealt. Ee, välja seda infot ehk siis Mm,
+
+412
+00:36:03.307 --> 00:36:08.819
+Artur: teie Laul oli Väga hea näide. Võibolla kõige parem oleks, kui saaks äkki isegi neid
+
+413
+00:36:10.041 --> 00:36:16.750
+Artur: Ee. Üles laadida. Teile? Jah, aga teie meetril oli all.
+
+414
+00:36:17.590 --> 00:36:22.780
+Artur: Näiteks return, et kui ta return Ib, siis
+
+415
+00:36:23.917 --> 00:36:27.759
+Artur: seda. See on täpselt just see, mida Gether teed.
+
+416
+00:36:29.416 --> 00:36:36.350
+Artur: Setter on see, mis ee teeb siis mingisuguse tegevuse seal meetodi sees. Ehk siis ta muudab midagi
+
+417
+00:36:37.776 --> 00:36:41.039
+Artur: nii palju, kui mina olen aru saanud. Võibolla ma eksin täielikult,
+
+418
+00:36:42.183 --> 00:36:47.970
+Artur: Kas Siin on mõni targem, kes. Äkki see on?
+
+419
+00:36:48.855 --> 00:36:51.610
+Artur: Mm, mul on, et see on,
+
+420
+00:36:52.501 --> 00:36:54.429
+Artur: sest ei ole. Ülejäänud on selline.
+
+421
+00:36:59.530 --> 00:37:00.550
+Artur: Ehk siis.
+
+422
+00:37:01.795 --> 00:37:04.930
+Artur: Ja miks kasutada.
+
+423
+00:37:09.598 --> 00:37:27.850
+Artur: Mina saan sellest niimoodi aru, et kui on objekt ja tal on mingid väärtused, siis kui on vaja sul mingit väärtuse sellel objektil mingit väärtust muuta, siis sa kasutad setter Eid. Ja siis kui sa tahad teada lihtsalt, mis on selle objekti väärtus, siis sa kasutad gettereid, Sa saad teada, mis asi see on
+
+424
+00:37:28.642 --> 00:37:29.809
+Artur: ja. Ja nii ongi.
+
+425
+00:37:30.643 --> 00:37:37.859
+Artur: Rohkemat Ma nagu sellest ei loe välja. Aga meil on üks slaid veel Äkki seal on midagi targemat? Aa, seda ei ole enam.
+
+426
+00:37:41.440 --> 00:37:48.059
+Artur: Kas on küsimusi, kui te. Kas te oskate öelda, et kus on neid andmeid Püsiv.
+
+427
+00:37:48.906 --> 00:37:50.529
+Artur: Ee, siin. Näiteks Gessar.
+
+428
+00:37:51.783 --> 00:38:10.380
+Artur: Ma saan aru. Ee. Mis loob su selle objekti klassis? Jah, ei, ee, See ei ole getter.
+
+429
+00:38:11.115 --> 00:38:22.749
+Artur: Sa konstruktoris Lood see valmis? Sa annad selle väärtused. Ee, nii siin näide. Ee, see näide, mis teil on? See on konstruktori käivitamine.
+
+430
+00:38:23.344 --> 00:38:30.979
+Artur: Ee, Ei, see on konstruktor. See loob selle auto valmis. Mis on siis kollane Charger hinna? Kümme? Tuhat
+
+431
+00:38:31.622 --> 00:38:45.960
+Artur: siis. Pärast Mingi muu programmi osa ütleb et, ma Tahan, et see kolon auto oleks sinine. Ja siis, ee, kasutad. Ee, nüüd on see sama auto, mis ee, konstruktor tegi? Kollasena
+
+432
+00:38:46.743 --> 00:38:53.139
+Artur: muudab, muudab Mingi teine ko kvoodilik. Selle objekti. Ee, ehk kaotavad siniseks.
+
+433
+00:38:55.026 --> 00:39:02.490
+Artur: See põhiline põhimõeline mõte ongi see, et ta on ee tundlik informatsioon,
+
+434
+00:39:03.175 --> 00:39:05.190
+Artur: et sa ei saaks neid muuta.
+
+435
+00:39:06.466 --> 00:39:10.030
+Artur: Niiöelda kuskil mujal, et ma annan talle uue väärtuse.
+
+436
+00:39:10.875 --> 00:39:18.859
+Artur: Ongi nagu, et, ee, sa ise tahad. Panna enamus asju niikuinii, Private.
+
+437
+00:39:19.527 --> 00:39:28.509
+Artur: Ee, kõik su objekti sisesed muutujad. Et ee, neid üldiselt muuta ei saaks. Ja siis sa lubad seda ühte väärtust muuta.
+
+438
+00:39:30.118 --> 00:39:36.190
+Artur: Siis loeb Lihtsalt selle konstruktsiooni info Või konstruktori?
+
+439
+00:39:38.472 --> 00:39:46.040
+Artur: Jah, Getheri abil. Sa saad tuua selle objekti all oleva väärtuse kuskil muus kontekstis nagu välja.
+
+440
+00:39:47.595 --> 00:39:50.820
+Artur: Aitäh, aitäh.
+
+441
+00:39:53.116 --> 00:40:01.570
+Artur: Nii, tere, ee. Me räägime juurdepääsu meetoditest. Siis et milleks neid vaja on? Ja mis need on
+
+442
+00:40:05.466 --> 00:40:08.380
+Artur: Ee, Põhimõtteliselt on siis ee neid, kaks,
+
+443
+00:40:09.105 --> 00:40:12.080
+Artur: et ta, on, ee, Public Ja Private.
+
+444
+00:40:12.931 --> 00:40:20.340
+Artur: Ja see siis, ee, määrab ära selle, et ee. Kui on public, siis on ee, kõigile ligipääs olemas.
+
+445
+00:40:21.162 --> 00:40:23.699
+Artur: Ja kui on, siis Ee, Private,
+
+446
+00:40:24.577 --> 00:40:31.630
+Artur: siis on, ee, määratud. Ära seal siis ee niiöelda nagu eelmised rääkisid. On See kapseldatud et ee
+
+447
+00:40:32.347 --> 00:40:35.450
+Artur: on. Siis ee, kindlad. Aa,
+
+448
+00:40:36.132 --> 00:40:43.120
+Artur: ee, ära ära määratud Siis kuidas? Kuidas see niiöelda siis, kes sinna ligi pääseb või või mida ta siis Täpselt teeb?
+
+449
+00:40:46.075 --> 00:40:46.870
+Artur: Jah.
+
+450
+00:40:48.027 --> 00:41:01.680
+Artur: Ee. Ma võtsin. Ee. Selle joonise meie materjalidest, et neid juurdepääsu meetodeid on tegelikult kaks tükki veel, aga me pidime ainult Public Ust ja Private ist siis tegema.
+
+451
+00:41:02.262 --> 00:41:04.920
+Artur: Ja siis, ee, nagu te näete, siis ee,
+
+452
+00:41:05.891 --> 00:41:17.900
+Artur: mõlemale. Noh, Public ja Private, et mõlemale on ligipääsetav Samas klassis. Aga Private ile ei pääse mujalt ligi. Et Private on siis ainult sama klassi all.
+
+453
+00:41:25.319 --> 00:41:29.810
+Artur: Ee, miks seda siis ee, vaja on sellepärast, et ee,
+
+454
+00:41:31.617 --> 00:41:35.919
+Artur: ee, annab siis ee. Kontrolli teatud ee kooliodadele,
+
+455
+00:41:36.493 --> 00:41:40.040
+Artur: et. Ee, Kes siis seda? Ee, kas saab muuta
+
+456
+00:41:40.730 --> 00:41:45.990
+Artur: Ee või ei saa Ja selles suhtes. Ee, ee, Kui on ee,
+
+457
+00:41:46.849 --> 00:41:53.199
+Artur: mm, pabrik, siis Põhimõtteliselt on see nagu kõigile. Ee, avatud ee muuta.
+
+458
+00:41:53.725 --> 00:42:00.090
+Artur: Ja kui on ee, Siis ee, private, Ee, siis, ee. Teatud. Ee,
+
+459
+00:42:01.003 --> 00:42:03.760
+Artur: ee. Osa saab siis muuta seal koodis
+
+460
+00:42:04.179 --> 00:42:08.969
+Artur: Ja põhimõtteliselt on siis, milleks seda on vaja? On Sellepärast, et Ee Näiteks, kui on ee,
+
+461
+00:42:09.905 --> 00:42:14.670
+Artur: lihtne näide pangaautomaadi näol, et ee. Pannes sisse.
+
+462
+00:42:15.633 --> 00:42:23.250
+Artur: Ee, oma, siis ee info Ee, koodi. Saad sa siis ligipääsu sellele näha, et kui palju seal seda
+
+463
+00:42:23.827 --> 00:42:24.809
+Artur: kontol raha on
+
+464
+00:42:25.494 --> 00:42:32.769
+Artur: ja ja avaliku puhul on siis see, et ee, sama pangaautomaat, et Kõik siis saavad seda automaati kasutada.
+
+465
+00:42:36.141 --> 00:42:37.399
+Artur: Keegi tahab sellest ka rääkida.
+
+466
+00:42:38.198 --> 00:42:44.089
+Artur: Tipp üks. Sa räägid täpselt, et milleks seda siis vaja on?
+
+467
+00:42:44.740 --> 00:42:48.050
+Artur: Kas ta just ei rääkinud sellest nagu kuhugi valest. Jah?
+
+468
+00:42:48.995 --> 00:42:51.280
+Artur: Ei, minu arust ta rääkis. Sellest ei või?
+
+469
+00:42:52.812 --> 00:43:01.549
+Artur: Vabandust, vabandust. Nagu te näete, siis see on Jaava koodi näide. Me tõime kaks tükki.
+
+470
+00:43:05.970 --> 00:43:11.180
+Artur: Ma ei tea, ma saan aru. Miks. Ma ei tea, miks see nii pime on,
+
+471
+00:43:13.164 --> 00:43:18.079
+Artur: meil ei ole millestki rääkida. See on selles mõttes, et nagu seal on näha, mis on public. Ja mis on Private?
+
+472
+00:43:18.601 --> 00:43:21.129
+Artur: Seal on selgitus ka all, et ee.
+
+473
+00:43:22.198 --> 00:43:29.529
+Artur: Public on siis, et kõik saavad kasutada Private, on see, et ainult see klass, et saab seda siis kasutada, et see on peidetud.
+
+474
+00:43:30.900 --> 00:43:36.609
+Artur: Ja siis kett. On see sama getter, et luba panust vaadata, aga mitte otse muuta.
+
+475
+00:43:37.120 --> 00:43:40.629
+Artur: Ja siis päriselu näide oligi see panga näide siis.
+
+476
+00:43:41.794 --> 00:43:47.499
+Artur: Ja selle, et, ee, et kes siis, ee, Kui on public, et kõik inimesed saavad kasutada
+
+477
+00:43:48.119 --> 00:43:51.509
+Artur: ja Private, et siis on nagu, ee, See, et ee,
+
+478
+00:43:52.466 --> 00:43:56.750
+Artur: konkreetse inimene oma niiöelda koodi sisestades, saab siis seda
+
+479
+00:43:57.538 --> 00:44:02.270
+Artur: ee, näha. Palju ta seal pangakontol on ja ja siis sealt välja võtta seda.
+
+480
+00:44:05.418 --> 00:44:14.889
+Artur: Kui meie selgitusest ei läheks, siis te saate minna. Ja siis seal on ka materjalid videod selle kohta, mis räägivad veel teisest Kahest klassist ka.
+
+481
+00:44:18.151 --> 00:44:25.240
+Artur: Ja aitäh. Võite koju minna või? Kas küsimusi on
+
+482
+00:44:30.048 --> 00:44:32.999
+Artur: teie nimesid avalikult muuta?
+
+483
+00:44:34.160 --> 00:44:39.990
+Artur: Kuidas Ee, mänguriga tahate? Et teie nimesid avalikult kõik muuta.
+
+484
+00:44:42.106 --> 00:44:50.579
+Artur: Aa, ei räägi räägi lähemalt. Teie näites olid nimi, kui ma õieti mäletan. Public
+
+485
+00:44:52.151 --> 00:44:54.329
+Artur: Keegi on kättesaadav. Mitu muudet on ju?
+
+486
+00:44:55.243 --> 00:45:03.409
+Artur: Aa, Siin on. Need kõik saavad seda kasutada. See oli mõeldud sellele, et kõik saavad seda infot kasutada.
+
+487
+00:45:05.758 --> 00:45:19.129
+Artur: Jah, mis on, mis sa mõtled siis aru saan selle selles suhtes asja muutmiseks. Siis sa võid lihtsalt muuta seda.
+
+488
+00:45:20.569 --> 00:45:20.929
+Artur: No,
+
+489
+00:45:21.565 --> 00:45:30.990
+Artur: Private Private. Mu nimi on Sander. Sa saad seda kettida, et mu nimi on Sander. Aga sa ei saa muuta seda, et see mu nimi on Mingi Peeter. Näiteks, eks See on nii,
+
+490
+00:45:32.140 --> 00:45:43.249
+Artur: sa Saad nime näha, aga sa ei saa nime muuta.
+
+491
+00:45:44.376 --> 00:45:47.560
+Artur: Nimi nimi võib olla avalik.
+
+492
+00:45:49.024 --> 00:45:49.679
+Artur: Miks?
+
+493
+00:45:51.050 --> 00:45:57.190
+Artur: Jah, on küll meil näitus. Jah, no vähemalt keegi talle õpetab.
+
+494
+00:46:00.179 --> 00:46:08.549
+Artur: Ja. Jah, ma ei tea. Noh, veel küsimusi. Jah, poolt olla. Asjad nagu kõik asjad vä
+
+495
+00:46:09.386 --> 00:46:12.170
+Artur: nagu soovitavad vajadusel panna pabrikaga
+
+496
+00:46:13.292 --> 00:46:27.039
+Artur: samas, Meil on samamoodi siin Klassiruumis Ju on väga public. Kõikide nime saame ju. Ma saan seda muuta, et ma panen tema nime. Sinna
+
+497
+00:46:27.916 --> 00:46:37.529
+Artur: tuleneb andmekaitsest ka mingisugused asjad, et mis võivad nagu olla avalikud ja mis mitte.
+
+498
+00:46:39.495 --> 00:46:53.020
+Artur: No mis sa mõtled siis? See peaks olema nagu eesnivi Private Viimane nimi Private. Anda neid lube.
+
+499
+00:46:53.894 --> 00:47:04.120
+Artur: Aga kui me tuleme selle sama näite juurde, mis selles näites? Selles? Elulises näites nimi Public ja vanus Private on üldse klass sellised.
+
+500
+00:47:05.081 --> 00:47:12.400
+Artur: Ee, sina inimesi. Inimene on klass. Ee, sina oled objekt
+
+501
+00:47:14.908 --> 00:47:23.070
+Artur: sees. Need andmed mis nagu. Mida sa pead Getheri Ja setteriga muutma ju aitäh.
+
+502
+00:47:26.084 --> 00:47:31.270
+Artur: Klass Klass on inimene. Siis, Ee, erinevad inimesed.
+
+503
+00:47:31.823 --> 00:47:39.680
+Artur: Sul on palju teadmisi selles osas, aga vaatame. Homme tuleb validaator kohale ja siis vaatame, kas need, ee valideeritakse.
+
+504
+00:47:41.133 --> 00:47:46.950
+Artur: Ma tunnen, et ma lahkun siit nagu vähem asju. Ma tulin siia, aga. Okei aitäh. Igatahes.
+
