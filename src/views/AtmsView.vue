@@ -5,6 +5,16 @@
         <h1 ref="MingiNimiRef">Pangaautomaadid</h1>
       </div>
     </div>
+    <div class="row">
+      <div class="col col-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>-- Kõik linnad --</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,11 +26,11 @@ export default {
   data() {
     return {
       userId: AuthService.getLoggedInUserId(),
-      roleName: AuthService.getLoggedInUserRoleName()
+      roleName: AuthService.getLoggedInUserRoleName(),
     }
   },
   mounted() {
-   alert('userId: ' + this.userId + ' roleName: ' + this.roleName)
+    // alert('userId: ' + this.userId + ' roleName: ' + this.roleName)
   },
 }
 </script>
