@@ -43,7 +43,8 @@
       "Bash(REPO=\"raintuur/classmoney\")",
       "Bash(__NEW_LINE_9891110918be1c2c__ gh:*)",
       "Bash(python3:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(git fetch *)"
     ]
   }
 }
