@@ -7,12 +7,7 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>-- Kõik Linnad --</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+        <CitiesDropdown :cities="cities" />
       </div>
     </div>
   </div>
@@ -20,19 +15,34 @@
 
 <script>
 import AuthService from '@/auth/AuthService.js'
-import cityService from '@/api-services/CityService.js'
+import CityService from '@/api-services/CityService.js'
+import NavigationService from '@/navigation/NavigationService.js'
+import CitiesDropdown from '@/components/CitiesDropdown.vue'
 
 export default {
   name: 'AtmsView',
+  components: { CitiesDropdown },
   data() {
     return {
       userId: AuthService.getLoggedInUserId(),
       roleName: AuthService.getLoggedInUserRoleName(),
+      cities: [
+        {
+          cityId: 0,
+          cityName: '',
+        },
+      ],
     }
   },
   methods: {
     getCities() {
-      cityService.sendGetCitiesRequest()
+      CityService.sendGetCitiesRequest()
+        .then((response) => this.handleGetCitiesResponse(response))
+        .catch((error) => NavigationService.navigateToErrorView())
+        .finally()
+    },
+    handleGetCitiesResponse(response) {
+      this.cities = response.data
     },
   },
   beforeMount() {
