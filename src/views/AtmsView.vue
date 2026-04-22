@@ -20,6 +20,7 @@
 
 <script>
 import AuthService from '@/auth/AuthService.js'
+import CityService from '@/api-services/CityService.js'
 
 export default {
   name: 'AtmsView',
@@ -29,8 +30,13 @@ export default {
       roleName: AuthService.getLoggedInUserRoleName(),
     }
   },
-  mounted() {
-    // alert('userId: ' + this.userId + ' roleName: ' + this.roleName)
+  methods: {
+    getCities() {
+      CityService.sendGetCitiesRequest()
+    },
+  },
+  beforeMount() {
+    this.getCities()
   },
 }
 </script>
