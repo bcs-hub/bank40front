@@ -7,7 +7,11 @@
     </div>
     <div class="row">
       <div class="col col-3">
-        <CitiesDropdown :cities="cities" />
+        <CitiesDropdown
+          :cities="cities"
+          :selected-city-id="selectedCityId"
+          @event-new-city-selected="setSelectedCityId"
+        />
       </div>
     </div>
   </div>
@@ -26,6 +30,9 @@ export default {
     return {
       userId: AuthService.getLoggedInUserId(),
       roleName: AuthService.getLoggedInUserRoleName(),
+
+      selectedCityId: 0,
+
       cities: [
         {
           cityId: 0,
@@ -35,6 +42,11 @@ export default {
     }
   },
   methods: {
+
+    setSelectedCityId(selectedCityId) {
+      this.selectedCityId = selectedCityId
+    },
+
     getCities() {
       CityService.sendGetCitiesRequest()
         .then((response) => this.handleGetCitiesResponse(response))
