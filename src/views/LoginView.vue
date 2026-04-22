@@ -41,7 +41,7 @@
 
 <script>
 import AlertError from '@/components/AlertError.vue'
-import LoginService from '@/services/LoginService.js'
+import LoginService from '@/api-services/LoginService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 
 export default {
