@@ -2,7 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h1 ref="MingiNimiRef">Pangaautomaadid</h1>
+        <h1>Pangaautomaadid</h1>
       </div>
     </div>
     <div class="row">
@@ -45,6 +45,7 @@ export default {
 
     setSelectedCityId(selectedCityId) {
       this.selectedCityId = selectedCityId
+      alert("cityId" + this.selectedCityId)
     },
 
     getCities() {
