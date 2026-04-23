@@ -19,10 +19,5 @@ export default {
     cities: Object,
     selectedCityId: Number,
   },
-  methods: {
-    NotifyParent() {
-      alert('Hei hei')
-    },
-  },
 }
 </script>
