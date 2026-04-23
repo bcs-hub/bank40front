@@ -36,36 +36,48 @@ src/components/CitiesDropdown.vue  ← child (laps)
 ### AtmsView (parent) — lühendatult
 
 ```vue
+
 <template>
   <CitiesDropdown
     :cities="cities"                              <!-- prop alla: linnade nimekiri -->
-    :selected-city-id="selectedCityId"            <!-- prop alla: valitud linna ID -->
-    @event-new-city-selected="setSelectedCityId"  <!-- kuula child sündmust üles -->
+  :selected-city-id="selectedCityId"            <!-- prop alla: valitud linna ID -->
+  @event-new-city-selected="setSelectedCityId"  <!-- kuula child sündmust üles -->
   />
 </template>
 
 <script>
-data() {
-  return {
-    selectedCityId: 0,   // algväärtus: kõik linnad (0 = filter puudub)
-    cities: [],
+  data()
+  {
+    return {
+      selectedCityId: 0,   // algväärtus: kõik linnad (0 = filter puudub)
+      cities: [],
+    }
   }
-},
-methods: {
-  setSelectedCityId(selectedCityId) {
-    this.selectedCityId = selectedCityId  // parent uuendab oma andmeid
-  },
-  getCities() {
-    CityService.sendGetCitiesRequest()
-      .then((response) => this.handleGetCitiesResponse(response))
-  },
-  handleGetCitiesResponse(response) {
-    this.cities = response.data  // linnad saabuvad serverist
-  },
-},
-beforeMount() {
-  this.getCities()  // lae linnad enne kuvamist
-},
+  ,
+  methods: {
+    getSelectedCityLocations(selectedCityId)
+    {
+      this.selectedCityId = selectedCityId  // parent uuendab oma andmeid
+    }
+  ,
+    getCities()
+    {
+      CityService.sendGetCitiesRequest()
+        .then((response) => this.handleGetCitiesResponse(response))
+    }
+  ,
+    handleGetCitiesResponse(response)
+    {
+      this.cities = response.data  // linnad saabuvad serverist
+    }
+  ,
+  }
+  ,
+  beforeMount()
+  {
+    this.getCities()  // lae linnad enne kuvamist
+  }
+  ,
 </script>
 ```
 
