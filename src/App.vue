@@ -14,7 +14,12 @@
         <RouterLink class="nav-link" to="/">Kodu</RouterLink>
         <RouterLink class="nav-link" to="/atms">Pangaautomaadid</RouterLink>
 
-        <RouterLink v-if="isLoggedIn" @click="executeLogOut" class="nav-link" to="/">Logi välja</RouterLink>
+        <RouterLink v-if="isLoggedIn" class="nav-link" to="/location"
+          >Asukoht</RouterLink
+        >
+        <RouterLink v-if="isLoggedIn" @click="executeLogOut" class="nav-link" to="/"
+          >Logi välja</RouterLink
+        >
         <RouterLink v-else class="nav-link" to="/login">Sisse logimine</RouterLink>
       </div>
     </div>

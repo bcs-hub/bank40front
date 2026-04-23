@@ -11,6 +11,7 @@
           :cities="cities"
           :selectedCityId="selectedCityId"
           @event-selected-city-changed="updateSelectedCityLocations"
+          :first-option-label="'-- Kõik linnad --'",
         />
       </div>
       <div class="col-9">
