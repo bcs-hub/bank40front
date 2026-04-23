@@ -2,7 +2,6 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <AlertError :error-message="errorMessage" />
         <h1>Pangaautomaadid</h1>
       </div>
     </div>
@@ -15,26 +14,8 @@
         />
       </div>
       <div class="col">
-        <table class="table table-dark table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Linn</th>
-              <th scope="col">Asukoht</th>
-              <th scope="col">Teenused</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tallinn</td>
-              <td>Sikupilli Prisma</td>
-              <td>
-                <div>Sularaha sisse</div>
-                <div>Sularaha välja</div>
-                <div>Maksed</div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <AlertError :error-message="errorMessage" />
+        <LocationsTable :locations="locations" />
       </div>
     </div>
   </div>
@@ -46,10 +27,11 @@ import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertError from '@/components/AlertError.vue'
+import LocationsTable from '@/views/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
-  components: { AlertError, CitiesDropdown },
+  components: { LocationsTable: LocationsTable, AlertError, CitiesDropdown },
   data() {
     return {
       errorMessage: '',
@@ -83,6 +65,7 @@ export default {
   },
   methods: {
     getLocations() {
+      this.errorMessage = ''
       LocationService.sendGetAtmLocations(this.selectedCityId)
         .then((response) => this.handleGetLocationsResponse(response.data))
         .catch((error) => this.handleGetLocationsError(error))
@@ -100,6 +83,9 @@ export default {
       // Kui saadakse http status 404 ja errorCode on 222, siis kuvada sõnumist saadud message sisu
       if (statusCode === 404 && this.errorResponse.errorCode === 222) {
         this.errorMessage = this.errorResponse.message
+        this.locations = []
+      } else {
+        NavigationService.navigateToErrorView()
       }
     },
 
