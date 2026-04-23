@@ -14,7 +14,6 @@
         />
       </div>
       <div class="col-9">
-        <AlertError :error-message="errorMessage" />
         <table class="table table-hover">
           <thead>
             <tr>
@@ -28,13 +27,17 @@
               <td>{{ location.cityName }}</td>
               <td>{{ location.locationName }}</td>
               <td>
-                <div v-for="transactionType in location.transactionTypes" :key="transactionType.transactionTypeName">
+                <div
+                  v-for="transactionType in location.transactionTypes"
+                  :key="transactionType.transactionTypeName"
+                >
                   {{ transactionType.transactionTypeName }}
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
+        <AlertError :error-message="errorMessage" />
       </div>
     </div>
   </div>
@@ -111,6 +114,7 @@ export default {
       this.errorResponse = error.data
       if (statusNumber === 404 && this.errorResponse.errorCode === 222) {
         this.errorMessage = this.errorResponse.message
+        this.locations = []
       } else {
         NavigationService.navigateToErrorView()
       }
