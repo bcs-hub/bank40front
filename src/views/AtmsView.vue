@@ -10,7 +10,7 @@
         <CitiesDropdown
           :cities="cities"
           :selected-city-id="selectedCityId"
-          @event-new-city-selected="setSelectedCityId"
+          @event-new-city-selected="selectedCityId = $event"
         />
       </div>
     </div>
