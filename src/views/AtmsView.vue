@@ -28,9 +28,9 @@
             <td>Tallinn</td>
             <td>Sikupilli Prisma</td>
             <td>
-                <p>Sularaha sisse</p>
-                <p>Sularaha välja</p>
-                <p>Maksed</p>
+                <div>Sularaha sisse</div>
+                <div>Sularaha välja</div>
+                <div>Maksed</div>
             </td>
           </tr>
           </tbody>
