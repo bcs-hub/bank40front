@@ -14,29 +14,7 @@
         />
       </div>
       <div class="col-9">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Linn</th>
-              <th scope="col">Asukoht</th>
-              <th scope="col">Teenused</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="location in locations" :key="location.locationId">
-              <td>{{ location.cityName }}</td>
-              <td>{{ location.locationName }}</td>
-              <td>
-                <div
-                  v-for="transactionType in location.transactionTypes"
-                  :key="transactionType.transactionTypeName"
-                >
-                  {{ transactionType.transactionTypeName }}
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <LocationsTable :locations="locations" />
         <AlertError :error-message="errorMessage" />
       </div>
     </div>
@@ -50,10 +28,11 @@ import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertError from '@/components/AlertError.vue'
+import LocationsTable from '@/components/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
-  components: { CitiesDropdown, AlertError },
+  components: { LocationsTable, CitiesDropdown, AlertError },
   data() {
     return {
       userId: AuthService.getLoggedInUserId(),
