@@ -45,6 +45,7 @@ export default {
 
     setSelectedCityId(selectedCityId) {
       this.selectedCityId = selectedCityId
+      alert("cityId" + this.selectedCityId)
     },
 
     getCities() {
