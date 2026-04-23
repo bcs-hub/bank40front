@@ -42,7 +42,8 @@
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
-        <ImageInput />
+        <ImageInput @event-new-image-selected="imageData = $event" />
+        <img :src="imageData" alt="" />
       </div>
     </div>
   </div>
@@ -59,6 +60,7 @@ export default {
   components: { ImageInput, CitiesDropdown },
   data() {
     return {
+      imageData: '',
       selectedCityId: 0,
 
       cities: [
