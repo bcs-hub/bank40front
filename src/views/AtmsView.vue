@@ -2,7 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h1 ref="MingiNimiRef">Pangaautomaadid</h1>
+        <h1>Pangaautomaadid</h1>
       </div>
     </div>
     <div class="row">
@@ -10,27 +10,31 @@
         <CitiesDropdown
           :cities="cities"
           :selected-city-id="selectedCityId"
-          @event-new-city-selected="selectedCityId = $event"
+          @event-new-city-selected="getSelectedCityLocations"
         />
+      </div>
+      <div class="col">
+        <AlertError :error-message="errorMessage" />
+        <LocationsTable :locations="locations" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import AuthService from '@/auth/AuthService.js'
 import CityService from '@/api-services/CityService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
+import LocationService from '@/api-services/LocationService.js'
+import AlertError from '@/components/AlertError.vue'
+import LocationsTable from '@/components/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
-  components: { CitiesDropdown },
+  components: { LocationsTable: LocationsTable, AlertError, CitiesDropdown },
   data() {
     return {
-      userId: AuthService.getLoggedInUserId(),
-      roleName: AuthService.getLoggedInUserRoleName(),
-
+      errorMessage: '',
       selectedCityId: 0,
 
       cities: [
@@ -39,12 +43,55 @@ export default {
           cityName: '',
         },
       ],
+
+      locations: [
+        {
+          locationId: 0,
+          locationName: '',
+          cityName: '',
+          transactionTypes: [
+            {
+              transactionTypeName: '',
+            },
+          ],
+        },
+      ],
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
+    getLocations() {
+      this.errorMessage = ''
+      LocationService.sendGetAtmLocations(this.selectedCityId)
+        .then((response) => this.handleGetLocationsResponse(response.data))
+        .catch((error) => this.handleGetLocationsError(error))
+        .finally()
+    },
 
-    setSelectedCityId(selectedCityId) {
+    handleGetLocationsResponse(locations) {
+      this.locations = locations
+    },
+
+    handleGetLocationsError(error) {
+      this.errorResponse = error.response.data
+      let statusCode = error.response.status
+
+      // Kui saadakse http status 404 ja errorCode on 222, siis kuvada sõnumist saadud message sisu
+      if (statusCode === 404 && this.errorResponse.errorCode === 222) {
+        this.errorMessage = this.errorResponse.message
+        this.locations = []
+      } else {
+        NavigationService.navigateToErrorView()
+      }
+    },
+
+    getSelectedCityLocations(selectedCityId) {
       this.selectedCityId = selectedCityId
+      this.getLocations()
     },
 
     getCities() {
@@ -60,6 +107,7 @@ export default {
   },
   beforeMount() {
     this.getCities()
+    this.getLocations()
   },
 }
 </script>

@@ -18,7 +18,6 @@ export default {
   props: {
     cities: Object,
     selectedCityId: Number,
-  },
-
+  }
 }
 </script>
