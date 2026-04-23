@@ -1,3 +1,4 @@
+SET search_path TO bank;
 -- Created by Vertabelo (http://vertabelo.com)
 -- Last modification date: 2024-03-28 12:01:59.87
 
