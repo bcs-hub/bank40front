@@ -10,10 +10,10 @@
         <CitiesDropdown
           :cities="cities"
           :selectedCityId="selectedCityId"
-          @event-selected-city-changed="setSelectedCityId"
+          @event-selected-city-changed="updateSelectedCityLocations"
         />
       </div>
-      <div class="col-6">
+      <div class="col-9">
         <AlertError :error-message="errorMessage" />
         <table class="table table-hover">
           <thead>
@@ -24,13 +24,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Tartu</td>
-              <td>Tasku</td>
+            <tr v-for="location in locations" :key="location.locationId">
+              <td>{{ location.cityName }}</td>
+              <td>{{ location.locationName }}</td>
               <td>
-                <div>sularaha välja</div>
-                <div>sularaha sisse</div>
-                <div>maksed</div>
+                <div v-for="transactionType in location.transactionTypes" :key="transactionType.transactionTypeName">
+                  {{ transactionType.transactionTypeName }}
+                </div>
               </td>
             </tr>
           </tbody>
@@ -89,7 +89,7 @@ export default {
         .finally()
     },
     getLocations() {
-      this.errorMessage=''
+      this.errorMessage = ''
       LocationService.sendGetAtmsLocationsRequest(this.selectedCityId)
         .then((response) => this.handleGetAtmsLocationsResponse(response.data))
         .catch((error) => this.handleGetLocationsError(error.response))
@@ -98,7 +98,7 @@ export default {
     handleGetCitiesResponse(response) {
       this.cities = response.data
     },
-    setSelectedCityId(event) {
+    updateSelectedCityLocations(event) {
       this.selectedCityId = Number(event)
       this.getLocations()
     },
@@ -112,6 +112,7 @@ export default {
       if (statusNumber === 404 && this.errorResponse.errorCode === 222) {
         this.errorMessage = this.errorResponse.message
       } else {
+        NavigationService.navigateToErrorView()
       }
     },
   },
