@@ -2,6 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
+
         <h1>Pangaautomaadid</h1>
       </div>
     </div>
@@ -14,28 +15,26 @@
         />
       </div>
       <div class="col">
-
         <table class="table table-dark table-hover">
           <thead>
-          <tr>
-            <th scope="col">Linn</th>
-            <th scope="col">Asukoht</th>
-            <th scope="col">Teenused</th>
-          </tr>
+            <tr>
+              <th scope="col">Linn</th>
+              <th scope="col">Asukoht</th>
+              <th scope="col">Teenused</th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Tallinn</td>
-            <td>Sikupilli Prisma</td>
-            <td>
+            <tr>
+              <td>Tallinn</td>
+              <td>Sikupilli Prisma</td>
+              <td>
                 <div>Sularaha sisse</div>
                 <div>Sularaha välja</div>
                 <div>Maksed</div>
-            </td>
-          </tr>
+              </td>
+            </tr>
           </tbody>
         </table>
-
       </div>
     </div>
   </div>
@@ -46,15 +45,13 @@ import AuthService from '@/auth/AuthService.js'
 import CityService from '@/api-services/CityService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
+import LocationService from '@/api-services/LocationService.js'
 
 export default {
   name: 'AtmsView',
   components: { CitiesDropdown },
   data() {
     return {
-      userId: AuthService.getLoggedInUserId(),
-      roleName: AuthService.getLoggedInUserRoleName(),
-
       selectedCityId: 0,
 
       cities: [
@@ -63,13 +60,54 @@ export default {
           cityName: '',
         },
       ],
+
+      locations: [
+        {
+          locationId: 0,
+          locationName: '',
+          cityName: '',
+          transactionTypes: [
+            {
+              transactionTypeName: '',
+            }
+          ],
+        }
+      ],
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
+    getLocations() {
+      LocationService.sendGetAtmLocations(this.selectedCityId)
+        .then((response) => this.handleGetLocationsResponse(response.data))
+        .catch((error) => this.handleGetLocationsError(error))
+        .finally()
+    },
+
+    handleGetLocationsResponse(locations) {
+      this.locations = locations
+    },
+
+    handleGetLocationsError(error) {
+      this.errorResponse = error.response.data
+      let statusCode = error.response.status
+
+      // Kui saadakse http status 404 ja errorCode on 222, siis kuvada sõnumist saadud message sisu
+      if (statusCode === 404 && this.errorResponse.errorCode === 222) {
+        // then
+
+      }
+
+
+    },
 
     setSelectedCityId(selectedCityId) {
       this.selectedCityId = selectedCityId
-      alert("cityId" + this.selectedCityId)
+      alert('cityId' + this.selectedCityId)
     },
 
     getCities() {
@@ -82,9 +120,12 @@ export default {
     handleGetCitiesResponse(response) {
       this.cities = response.data
     },
+
+
   },
   beforeMount() {
     this.getCities()
+    this.getLocations()
   },
 }
 </script>
