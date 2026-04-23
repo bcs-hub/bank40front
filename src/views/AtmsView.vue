@@ -9,55 +9,105 @@
       <div class="col col-3">
         <CitiesDropdown
           :cities="cities"
-          :celected-city-id="selectedCityId"
-          @event-new-city-slected="setSelectedCityId"
+          :selected-city-id="selectedCityId"
+          @event-new-city-selected="getSelectedCityLocations"
         />
+      </div>
+      <div class="col">
+        <AlertError :error-message="errorMessage" />
+        <LocationsTable :locations="locations" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import AuthService from '@/auth/AuthService.js'
 import CityService from '@/api-services/CityService.js'
-import navigationService from '@/navigation/NavigationService.js'
+import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
+import LocationService from '@/api-services/LocationService.js'
+import AlertError from '@/components/AlertError.vue'
+import LocationsTable from '@/components/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
-  components: { CitiesDropdown },
+  components: { LocationsTable: LocationsTable, AlertError, CitiesDropdown },
   data() {
     return {
-      userId: AuthService.getLoggedInUserId(),
-      roleName: AuthService.getLoggedInUserRoleName(),
+      errorMessage: '',
       selectedCityId: 0,
+
       cities: [
         {
           cityId: 0,
           cityName: '',
         },
       ],
+
+      locations: [
+        {
+          locationId: 0,
+          locationName: '',
+          cityName: '',
+          transactionTypes: [
+            {
+              transactionTypeName: '',
+            },
+          ],
+        },
+      ],
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
-    setSelectedCityId(selectedCityId){
+    getLocations() {
+      this.errorMessage = ''
+      LocationService.sendGetAtmLocations(this.selectedCityId)
+        .then((response) => this.handleGetLocationsResponse(response.data))
+        .catch((error) => this.handleGetLocationsError(error))
+        .finally()
+    },
+
+    handleGetLocationsResponse(locations) {
+      this.locations = locations
+    },
+
+    handleGetLocationsError(error) {
+      this.errorResponse = error.response.data
+      let statusCode = error.response.status
+
+      // Kui saadakse http status 404 ja errorCode on 222, siis kuvada sõnumist saadud message sisu
+      if (statusCode === 404 && this.errorResponse.errorCode === 222) {
+        this.errorMessage = this.errorResponse.message
+        this.locations = []
+      } else {
+        NavigationService.navigateToErrorView()
+      }
+    },
+
+    getSelectedCityLocations(selectedCityId) {
       this.selectedCityId = selectedCityId
+      this.getLocations()
     },
 
     getCities() {
       CityService.sendGetCitiesRequest()
         .then((response) => this.handleGetCitiesResponse(response))
-        .catch(() => navigationService.navigateToErrorView())
+        .catch(() => NavigationService.navigateToErrorView())
         .finally()
     },
+
     handleGetCitiesResponse(response) {
       this.cities = response.data
     },
   },
-
   beforeMount() {
-    //  alert('userId: ' + this.userId + ' roleName: ' + this.roleName)
     this.getCities()
+    this.getLocations()
   },
 }
 </script>

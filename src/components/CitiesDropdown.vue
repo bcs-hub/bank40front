@@ -1,7 +1,7 @@
 <template>
   <select
-    @change="$emit('event-new-city-slected', Number($event.target.value))"
-    :value="celectedCityId"
+    @change="$emit('event-new-city-selected', Number($event.target.value))"
+    :value="selectedCityId"
     class="form-select"
     aria-label="Vali linn"
   >
@@ -17,8 +17,7 @@ export default {
   name: 'CitiesDropdown',
   props: {
     cities: Object,
-    celectedCityId: Number,
-  },
-
+    selectedCityId: Number,
+  }
 }
 </script>
