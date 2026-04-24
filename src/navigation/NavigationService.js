@@ -6,7 +6,7 @@ export default {
   },
 
   navigateToErrorView() {
-    // router.push({ name: 'errorRoute' })
+    router.push({ name: 'errorRoute' })
   },
 
   navigateToNotAuthorizedView() {
