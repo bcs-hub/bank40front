@@ -9,6 +9,7 @@ export default {
 </script>
 
 <template>
+  <h5>Saadavad toimingu tüübid</h5>
   <div class="mb-3">
     <div
       v-for="transactionType in transactionTypes"

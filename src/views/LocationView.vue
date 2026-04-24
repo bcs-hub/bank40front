@@ -5,12 +5,16 @@ import NavigationService from '@/navigation/NavigationService.js'
 import ImageInput from '@/components/location/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
+import AtmsImage from '@/components/location/AtmsImage.vue'
+import AlertError from '@/components/AlertError.vue'
+import LocationService from '@/api-services/LocationService.js'
 
 export default {
   name: 'LocationView',
-  components: { LocationForm, ImageInput, CitiesDropdown },
+  components: { AlertError, AtmsImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
+      errorMessage: '',
       cities: [
         {
           cityId: 0,
@@ -25,7 +29,7 @@ export default {
         transactionTypes: [
           {
             transactionTypeId: 0,
-            transactionTypeName: 'Kala',
+            transactionTypeName: '',
             isAvailable: false,
           },
         ],
@@ -38,6 +42,39 @@ export default {
         .then((response) => this.handleGetCitiesResponse(response))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
+    },
+    addLocation() {
+      this.errorMessage = ''
+      let errorMessages = this.validateFormCorrectInput()
+      this.errorMessage = errorMessages.toString().replaceAll(',','; \n')
+      if(this.errorMessage===''){
+        let tagasi=LocationService.sendPostAtmLocation(this.location)
+      }
+    },
+    validateFormCorrectInput() {
+      let errorMessages = []
+      if (this.location.cityId === 0) {
+        errorMessages.push('Vali mõni linn')
+      }
+      if (this.location.locationName === '') {
+        errorMessages.push('Pane asukohale nimi')
+      }
+      if (this.location.numberOfAtms < 1) {
+        errorMessages.push('Peab olema vähemalt üks pangaautomaat')
+      }
+
+      if (!this.atLeastOneTransactionTypeIsSelected()) {
+        errorMessages.push('Vali vähemalt üks toimingu tüüp')
+      }
+      return errorMessages
+    },
+    atLeastOneTransactionTypeIsSelected() {
+      for (let transactionType of this.location.transactionTypes) {
+        if (transactionType.isAvailable) {
+          return true
+        }
+      }
+      return false
     },
     getLocationTransactionTypes() {
       TransactionTypeService.sendGetTransactionTypesRequest()
@@ -66,6 +103,7 @@ export default {
   <div class="container text-center">
     <div class="row">
       <div class="col">
+        <AlertError :error-message="errorMessage" />
         <h2>Lisa asukoht</h2>
       </div>
     </div>
@@ -88,15 +126,7 @@ export default {
         />
       </div>
       <div class="col">
-        <div>
-          <img
-            v-if="location.imageData === ''"
-            src="@/assets/images/atm.png"
-            class="img-thumbnail"
-            alt="Pangaautmaadi pilt"
-          />
-          <img v-else :src="location.imageData" class="img-thumbnail" alt="Pangaautmaadi pilt" />
-        </div>
+        <AtmsImage :location="location.imageData" />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -107,7 +137,7 @@ export default {
     <div class="row justify-content-center">
       <div class="col-4">
         <button type="button" class="btn btn-outline-secondary me-3">Tagasi</button>
-        <button type="button" class="btn btn-outline-success">Lisa</button>
+        <button @click="addLocation()" type="button" class="btn btn-outline-success">Lisa</button>
       </div>
     </div>
   </div>

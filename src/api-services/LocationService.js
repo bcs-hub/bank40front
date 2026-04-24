@@ -1,6 +1,9 @@
 import axios from 'axios'
 
 export default {
+  sendPostAtmLocation(location){
+    return axios.post('/api/atm/location',location)
+  },
   sendGetAtmsLocationsRequest(cityId){
     return axios.get('/api/atm/locations',{
       headers:{Prefer:this.getPreferValue(cityId)},
