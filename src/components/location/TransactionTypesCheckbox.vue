@@ -5,10 +5,11 @@
     class="form-check"
   >
     <input
+      :checked="transactionType.isAvailable"
+      @input="$emit('event-transaction-type-checkbox-toggled', transactionType.transactionTypeId)"
       class="form-check-input"
       type="checkbox"
       :id="'transactionTypeId-' + transactionType.transactionTypeId"
-      :checked="transactionType.isAvailable"
     />
     <label class="form-check-label" :for="'transactionTypeId-' + transactionType.transactionTypeId">
       {{ transactionType.transactionTypeName }}

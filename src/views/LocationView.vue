@@ -16,7 +16,12 @@
         />
       </div>
       <div class="col col-2">
-        <LocationForm :location="location" />
+        <LocationForm
+          :location="location"
+          @event-location-name-updated="location.locationName = $event"
+          @event-number-of-atms-updated="location.numberOfAtms = $event"
+          @event-transaction-type-checkbox-toggled="handleTransactionTypeCheckboxToggle"
+        />
       </div>
       <div class="col col-2">
         <img
@@ -49,10 +54,11 @@ import NavigationService from '@/navigation/NavigationService.js'
 import ImageInput from '@/components/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
+import TransactionTypesCheckbox from '@/components/location/TransactionTypesCheckbox.vue'
 
 export default {
   name: 'LocationView',
-  components: { LocationForm, ImageInput, CitiesDropdown },
+  components: { TransactionTypesCheckbox, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
       location: {
@@ -78,6 +84,12 @@ export default {
     }
   },
   methods: {
+    handleTransactionTypeCheckboxToggle(transactionTypeId) {
+      this.location.transactionTypes = this.location.transactionTypes.map((t) =>
+        t.transactionTypeId === transactionTypeId ? { ...t, isAvailable: !t.isAvailable } : t,
+      )
+    },
+
     getCities() {
       CityService.sendGetCitiesRequest()
         .then((response) => (this.cities = response.data))

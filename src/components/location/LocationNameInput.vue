@@ -2,6 +2,7 @@
   <div class="form-floating mb-3">
     <input
       :value="locationName"
+      @input="$emit('event-location-name-updated', $event.target.value)"
       type="text"
       class="form-control"
       id="inputLocationName"
@@ -17,5 +18,6 @@ export default {
   props: {
     locationName: String,
   },
+  emits: ['event-location-name-updated'],
 }
 </script>
