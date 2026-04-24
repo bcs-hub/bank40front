@@ -9,7 +9,7 @@
       <div class="col col-2">
         <CitiesDropdown
           :cities="cities"
-          :selected-city-id="selectedCityId"
+          :selected-city-id="location.cityId"
           first-option-label="Vali linn"
           :first-option-is-disabled="true"
         />
@@ -59,17 +59,17 @@
       </div>
       <div class="col col-2">
         <img
-          v-if="imageData === ''"
+          v-if="location.imageData === ''"
           src="@/assets/images/atm.png"
           class="img-thumbnail"
           alt="Pangaautomaadi pilt"
         />
-        <img v-else :src="imageData" class="img-thumbnail" alt="Pangaautomaadi pilt" />
+        <img v-else :src="location.imageData" class="img-thumbnail" alt="Pangaautomaadi pilt" />
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
-        <ImageInput @event-new-image-selected="imageData = $event" />
+        <ImageInput @event-new-image-selected="location.imageData = $event" />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -92,8 +92,6 @@ export default {
   components: { ImageInput, CitiesDropdown },
   data() {
     return {
-      imageData: '',
-      selectedCityId: 0,
 
       location: {
         cityId: 0,
