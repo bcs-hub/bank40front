@@ -16,7 +16,7 @@
 export default {
   name: 'CitiesDropdown',
   props: {
-    cities: [],
+    cities: [{}],
     selectedCityId: Number,
     firstOptionLabel: { type: String, default: '-- Kõik linnad --' },
     firstOptionIsDisabled:{type: Boolean, default: false },
