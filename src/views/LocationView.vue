@@ -2,8 +2,8 @@
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import CityService from '@/api-services/CityService.js'
 import NavigationService from '@/navigation/NavigationService.js'
-import ImageInput from '@/components/ImageInput.vue'
-import LocationForm from '@/components/LocationForm.vue'
+import ImageInput from '@/components/location/ImageInput.vue'
+import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 
 export default {
