@@ -1,7 +1,8 @@
 <template>
   <div class="container text-center">
-    <div class="row mb-3">
-      <div class="col">
+    <div class="row justify-content-center mb-3">
+      <div class="col col-4">
+        <AlertError :error-message="errorMessage" />
         <h1>Lisa asukoht</h1>
       </div>
     </div>
@@ -24,13 +25,7 @@
         />
       </div>
       <div class="col col-2">
-        <img
-          v-if="location.imageData === ''"
-          src="@/assets/images/atm.png"
-          class="img-thumbnail"
-          alt="Pangaautomaadi pilt"
-        />
-        <img v-else :src="location.imageData" class="img-thumbnail" alt="Pangaautomaadi pilt" />
+        <AtmImage :image-data="location.imageData" />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -41,7 +36,7 @@
     <div class="row justify-content-center">
       <div class="col col-4">
         <button type="submit" class="btn btn-outline-secondary me-3">Tagasi</button>
-        <button type="submit" class="btn btn-outline-success">Lisa</button>
+        <button @click="addLocation" type="submit" class="btn btn-outline-success">Lisa</button>
       </div>
     </div>
   </div>
@@ -54,13 +49,16 @@ import NavigationService from '@/navigation/NavigationService.js'
 import ImageInput from '@/components/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
-import TransactionTypesCheckbox from '@/components/location/TransactionTypesCheckbox.vue'
+import AtmImage from '@/views/AtmImage.vue'
+import AlertError from '@/components/AlertError.vue'
 
 export default {
   name: 'LocationView',
-  components: { TransactionTypesCheckbox, LocationForm, ImageInput, CitiesDropdown },
+  components: { AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
+      errorMessage: '',
+
       location: {
         cityId: 0,
         locationName: '',
@@ -84,6 +82,49 @@ export default {
     }
   },
   methods: {
+    addLocation() {
+      // todo: valideerime veaolukorrad
+      this.validateFormCorrectInput()
+
+      // todo: kui on mingi viga, siis täida ära 'errorMessage'
+      if (this.errorMessage === '') {
+        // todo: saada sõnum backi
+      }
+    },
+
+    validateFormCorrectInput() {
+      this.errorMessage = ''
+      let errorMessages = []
+
+      if (this.location.cityId === 0) {
+        errorMessages.push('Vali mingi linn')
+      }
+
+      if (this.location.locationName === '') {
+        errorMessages.push('Täida askoha nimi')
+      }
+
+      if (this.location.numberOfAtms < 1) {
+        errorMessages.push('Vali vähemalt 1 pangaautomaat')
+      }
+
+      let checkedTransactionTypeCount = 0
+
+      for (let transactionType of this.location.transactionTypes) {
+        if (transactionType.isAvailable) {
+          break
+        }
+      }
+
+      errorMessages.push('Vali vähemalt 1 ATM toiming')
+
+      this.errorMessage = errorMessages.toString()
+    },
+
+    atleastOneTransactionTypeIsSelected() {
+
+    },
+
     handleTransactionTypeCheckboxToggle(transactionTypeId) {
       this.location.transactionTypes = this.location.transactionTypes.map((t) =>
         t.transactionTypeId === transactionTypeId ? { ...t, isAvailable: !t.isAvailable } : t,

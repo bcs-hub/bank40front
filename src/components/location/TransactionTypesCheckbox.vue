@@ -1,4 +1,5 @@
 <template>
+  <h5>Vali võimalikud ATM toimingud</h5>
   <div
     v-for="transactionType in transactionTypes"
     :key="transactionType.transactionTypeId"
@@ -23,5 +24,6 @@ export default {
   props: {
     transactionTypes: Array,
   },
+  emits: ['event-transaction-type-checkbox-toggled'],
 }
 </script>
