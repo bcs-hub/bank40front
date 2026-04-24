@@ -49,8 +49,10 @@ export default {
     handleGetCitiesResponse(response) {
       this.cities = response.data
     },
-    handleTransactionTypeCheckboxToggle(transactionTypeId){
-
+    handleTransactionTypeCheckboxToggle(transactionTypeId) {
+      this.location.transactionTypes = this.location.transactionTypes.map((t) =>
+        t.transactionTypeId === transactionTypeId ? { ...t, isAvailable: !t.isAvailable } : t,
+      )
     },
   },
   beforeMount() {
