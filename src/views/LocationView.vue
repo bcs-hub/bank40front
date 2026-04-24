@@ -16,6 +16,20 @@ export default {
         },
       ],
       selectedCityId: 0,
+      imageData:'',
+      location:{
+        cityId: 0,
+        locationName: '',
+        numberOfAtms: 1,
+        imageData: '',
+        transactionTypes: [
+          {
+            transactionTypeId: 0,
+            transactionTypeName: 'Kala',
+            isAvailable: false
+          }
+        ]
+      },
     }
   },
   methods: {
@@ -60,6 +74,7 @@ export default {
               class="form-control"
               placeholder="Asukoht"
               id="inputLocationName"
+              :value="location.locationName"
             ></input>
             <label for="inputLocationName">Asukoht</label>
           </div>
@@ -70,24 +85,36 @@ export default {
               class="form-control"
               placeholder="Automaatide arv"
               id="numberOfAtms"
+              :value="location.numberOfAtms"
             ></input>
             <label for="numberOfAtms">Automaatide arv</label>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="1">
-            <label class="form-check-label" for="1">
-              Sularaha välja
-            </label>
+          <div class="mb-3">
+            <div v-for="transactionType in location.transactionTypes" :key="transactionType.transactionTypeId" class="form-check">
+              <input class="form-check-input" type="checkbox" :checked="transactionType.isAvailable" value="" :id="'transactionTypeId-'+transactionType.transactionTypeId">
+              <label class="form-check-label" :for="'transactionTypeId-'+transactionType.transactionTypeId">
+                {{transactionType.transactionTypeName}}
+              </label>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
-        <h2>Pilt</h2>
+        <div>
+        <img v-if="imageData===''" src="@/assets/images/atm.png" class="img-thumbnail" alt="Pangaautmaadi pilt">
+        <img v-else :src="imageData" class="img-thumbnail" alt="Pangaautmaadi pilt">
+        </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-3">
-        <image-input></image-input>
+        <ImageInput @event-new-image-selected="imageData = $event" />
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <button  type="button" class="btn btn-outline-secondary me-3" >Tagasi</button>
+        <button type="button" class="btn btn-outline-success" >Lisa</button >
       </div>
     </div>
   </div>
