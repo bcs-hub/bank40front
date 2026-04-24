@@ -25,7 +25,7 @@ export default {
         cityId: 0,
         locationName: '',
         numberOfAtms: 1,
-        imageData: '',
+        imageData:'',
         transactionTypes: [
           {
             transactionTypeId: 0,
@@ -126,7 +126,7 @@ export default {
         />
       </div>
       <div class="col">
-        <AtmsImage :location="location.imageData" />
+        <AtmsImage :image-data="location.imageData" />
       </div>
     </div>
     <div class="row justify-content-center">
