@@ -40,6 +40,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -51,6 +52,7 @@ import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 import AtmImage from '@/views/AtmImage.vue'
 import AlertError from '@/components/AlertError.vue'
+import LocationService from '@/api-services/LocationService.js'
 
 export default {
   name: 'LocationView',
@@ -83,12 +85,11 @@ export default {
   },
   methods: {
     addLocation() {
-      // todo: valideerime veaolukorrad
       this.validateFormCorrectInput()
 
       // todo: kui on mingi viga, siis täida ära 'errorMessage'
       if (this.errorMessage === '') {
-        // todo: saada sõnum backi
+        LocationService.sendPostAtmLocation(this.location)
       }
     },
 
@@ -108,21 +109,20 @@ export default {
         errorMessages.push('Vali vähemalt 1 pangaautomaat')
       }
 
-      let checkedTransactionTypeCount = 0
-
-      for (let transactionType of this.location.transactionTypes) {
-        if (transactionType.isAvailable) {
-          break
-        }
+      if (!this.atLeastOneTransactionTypeIsSelected()) {
+        errorMessages.push('Vali vähemalt 1 ATM toiming')
       }
 
-      errorMessages.push('Vali vähemalt 1 ATM toiming')
-
-      this.errorMessage = errorMessages.toString()
+      this.errorMessage = errorMessages.join('\n')
     },
 
-    atleastOneTransactionTypeIsSelected() {
-
+    atLeastOneTransactionTypeIsSelected() {
+      for (let transactionType of this.location.transactionTypes) {
+        if (transactionType.isAvailable) {
+          return true
+        }
+      }
+      return false
     },
 
     handleTransactionTypeCheckboxToggle(transactionTypeId) {
