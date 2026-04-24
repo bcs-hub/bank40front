@@ -36,14 +36,15 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <h4>pilt</h4>
+      <div class="col col-2">
+        <img v-if="imageData === ''" src="@/assets/images/atm.png" class="img-thumbnail" alt="Pangaautomaadi pilt" />
+        <img v-else :src="imageData" class="img-thumbnail" alt="Pangaautomaadi pilt" />
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
         <ImageInput @event-new-image-selected="imageData = $event" />
-        <img :src="imageData" alt="" />
+
       </div>
     </div>
   </div>
