@@ -49,6 +49,9 @@ export default {
     handleGetCitiesResponse(response) {
       this.cities = response.data
     },
+    handleTransactionTypeCheckboxToggle(transactionTypeId){
+
+    },
   },
   beforeMount() {
     this.getCities()
@@ -71,10 +74,16 @@ export default {
           :selected-city-id="location.cityId"
           :first-option-label="'Vali Linn'"
           :first-option-is-disabled="true"
+          @event-selected-city-changed="location.cityId = $event"
         />
       </div>
       <div class="col-4">
-        <LocationForm :location="location" />
+        <LocationForm
+          :location="location"
+          @event-location-name-updated="location.locationName = $event"
+          @event-number-of-atms-updated="location.numberOfAtms = $event"
+          @event-transaction-type-chackbox-toggled="handleTransactionTypeCheckboxToggle"
+        />
       </div>
       <div class="col">
         <div>

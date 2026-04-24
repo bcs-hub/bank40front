@@ -4,6 +4,7 @@ export default {
   props: {
     transactionTypes: [],
   },
+  emits: ['event-transaction-type-chackbox-toggled'],
 }
 </script>
 
@@ -18,6 +19,7 @@ export default {
         class="form-check-input"
         type="checkbox"
         :checked="transactionType.isAvailable"
+        @input="$emit('event-transaction-type-chackbox-toggled', transactionType.transactionTypeId)"
         value=""
         :id="'transactionTypeId-' + transactionType.transactionTypeId"
       />

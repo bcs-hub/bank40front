@@ -22,5 +22,7 @@ export default {
     firstOptionIsDisabled:{type: Boolean, default: false },
   },
   methods: {},
+  emits:
+    ['event-selected-city-changed'],
 }
 </script>
