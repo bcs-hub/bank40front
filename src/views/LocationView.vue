@@ -12,6 +12,7 @@
           :selected-city-id="location.cityId"
           first-option-label="Vali linn"
           :first-option-is-disabled="true"
+          @event-new-city-selected="location.cityId = $event"
         />
       </div>
       <div class="col col-2">
@@ -46,7 +47,7 @@ import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import CityService from '@/api-services/CityService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import ImageInput from '@/components/ImageInput.vue'
-import LocationForm from '@/views/LocationForm.vue'
+import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 
 export default {
@@ -64,7 +65,7 @@ export default {
             transactionTypeId: 0,
             transactionTypeName: '',
             isAvailable: false,
-          }
+          },
         ],
       },
 
@@ -79,15 +80,14 @@ export default {
   methods: {
     getCities() {
       CityService.sendGetCitiesRequest()
-        .then((response) => this.cities = response.data)
+        .then((response) => (this.cities = response.data))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
     },
 
-
     getLocationTransactionTypes() {
       TransactionTypeService.sendGetTransactionTypesRequest()
-        .then(response => this.location.transactionTypes = response.data )
+        .then((response) => (this.location.transactionTypes = response.data))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
     },

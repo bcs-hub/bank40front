@@ -27,7 +27,7 @@ import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertError from '@/components/AlertError.vue'
-import LocationsTable from '@/components/LocationsTable.vue'
+import LocationsTable from '@/components/location/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',

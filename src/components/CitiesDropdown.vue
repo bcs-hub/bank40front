@@ -27,5 +27,6 @@ export default {
       default: false,
     },
   },
+  emits: ['event-new-city-selected'],
 }
 </script>
