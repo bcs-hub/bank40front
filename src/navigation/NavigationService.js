@@ -6,7 +6,8 @@ export default {
   },
 
   navigateToErrorView() {
-    router.push({ name: 'errorRoute' })
+    // todo: peale arendust lülita sisse
+    // router.push({ name: 'errorRoute' })
   },
 
   navigateToNotAuthorizedView() {
