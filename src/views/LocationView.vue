@@ -2,8 +2,8 @@
   <div class="container text-center">
     <div class="row justify-content-center mb-3">
       <div class="col col-4">
-        <AlertSuccess :success-message="successMessage" />
-        <AlertError :error-message="errorMessage" />
+        <AlertSuccess :success-message="successMessage" @event-click-close="resetAllMessages" />
+        <AlertError :error-message="errorMessage" @event-click-close="resetAllMessages" />
         <h1>Lisa asukoht</h1>
       </div>
     </div>
@@ -131,12 +131,11 @@ export default {
       const statusCode = error.response.status
       this.errorResponse = error.response.data
 
-      if (statusCode === 403 && this.errorResponse.errorCode === 333){
+      if (statusCode === 403 && this.errorResponse.errorCode === 333) {
         this.errorMessage = this.errorResponse.message
       } else {
         NavigationService.navigateToErrorView()
       }
-
     },
 
     validateFormCorrectInput() {
