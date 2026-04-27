@@ -1,6 +1,6 @@
 <template>
   <div class="container text-center">
-    <div class="row">
+    <div class="row mb-3">
       <div class="col">
         <h1>Pangaautomaadid</h1>
       </div>
@@ -26,8 +26,8 @@ import CityService from '@/api-services/CityService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import LocationService from '@/api-services/LocationService.js'
-import AlertError from '@/components/AlertError.vue'
-import LocationsTable from '@/components/LocationsTable.vue'
+import AlertError from '@/components/alerts/AlertError.vue'
+import LocationsTable from '@/components/location/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
