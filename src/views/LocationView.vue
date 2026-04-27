@@ -31,7 +31,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
-        <ImageInput @event-new-image-selected="location.imageData = $event" />
+        <ImageInput
+          ref="imageInputRef"
+          :reset-file-input="resetImageInput"
+          @event-new-image-selected="location.imageData = $event"
+          @event-reset-image-select-complete="resetImageInput = false"
+        />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -62,6 +67,7 @@ export default {
     return {
       successMessage: '',
       errorMessage: '',
+      resetImageInput: false,
 
       location: {
         cityId: 0,
@@ -90,7 +96,6 @@ export default {
       this.resetAllMessages()
       this.validateFormCorrectInput()
 
-      // todo: kui on mingi viga, siis täida ära 'errorMessage'
       if (this.errorMessage === '') {
         LocationService.sendPostAtmLocation(this.location)
           .then(() => this.handleAddLocationResponse())
@@ -102,6 +107,18 @@ export default {
     handleAddLocationResponse() {
       this.successMessage =
         'Pangaautomaadi asukoht "' + this.location.locationName + '" on süsteemi lisatud :)'
+      this.resetLocationFields()
+      // näide ref kasutususest
+      // this.$refs.imageInputRef.$refs.fileInput.value = ''
+      this.resetImageInput = true
+    },
+
+    resetLocationFields() {
+      this.location.cityId = 0
+      this.location.locationName = ''
+      this.location.numberOfAtms = 1
+      this.location.imageData = ''
+      this.getLocationTransactionTypes()
     },
 
     validateFormCorrectInput() {
