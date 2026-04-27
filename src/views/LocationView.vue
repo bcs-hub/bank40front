@@ -59,6 +59,7 @@ import AtmImage from '@/views/AtmImage.vue'
 import AlertError from '@/components/alerts/AlertError.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
+import navigationService from '@/navigation/NavigationService.js'
 
 export default {
   name: 'LocationView',
@@ -89,6 +90,11 @@ export default {
           cityName: '',
         },
       ],
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
@@ -99,7 +105,7 @@ export default {
       if (this.errorMessage === '') {
         LocationService.sendPostAtmLocation(this.location)
           .then(() => this.handleAddLocationResponse())
-          .catch()
+          .catch((error) => this.handleAddLocationError(error))
           .finally()
       }
     },
@@ -119,6 +125,17 @@ export default {
       this.location.numberOfAtms = 1
       this.location.imageData = ''
       this.getLocationTransactionTypes()
+    },
+
+    handleAddLocationError(error) {
+      const statusCode = error.response.status
+      this.errorResponse = error.response.data
+
+      if (statusCode === 403 && this.errorResponse.status === 333) {
+        this.errorMessage = this.errorResponse.message
+      } else {
+        NavigationService.navigateToErrorView()
+      }
     },
 
     validateFormCorrectInput() {
