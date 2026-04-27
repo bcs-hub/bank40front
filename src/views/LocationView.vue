@@ -17,6 +17,7 @@ export default {
     return {
       errorMessage: '',
       successMessage: '',
+      resetImageInput: false,
 
       cities: [
         {
@@ -37,6 +38,10 @@ export default {
           },
         ],
       },
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
@@ -55,28 +60,33 @@ export default {
           .then(() => {
             this.handleAddLocationResponse()
           })
-          .catch()
+          .catch((error)=>(this.handleAddLocationError(error.)))
           .finally()
       }
     },
     handleAddLocationResponse() {
-      this.successMessage= 'Pangaautommadi asukoht "'+this.location.locationName+'" on süsteemi lisatud.'
+      this.successMessage =
+        'Pangaautommadi asukoht "' + this.location.locationName + '" on süsteemi lisatud.'
       this.clearLocationForm()
     },
     clearLocationForm() {
-      this.location={
-        cityId: 0,
-          locationName: '',
-        numberOfAtms: 1,
-        imageData: '',
-        transactionTypes: [
-        {
-          transactionTypeId: 0,
-          transactionTypeName: '',
-          isAvailable: false,
-        },
-      ],
+      this.location.cityId = 0
+      this.location.locationName = ''
+      this.location.numberOfAtms = 1
+      this.location.imageData = ''
+      this.resetImageInput = true
+      this.getLocationTransactionTypes()
+    },
+    handleAddLocationError(error) {
+      this.errorResponse=error.response.data
+      const statusCode=error.response.status
+      if (statusCode===403&&this.errorResponse.errorCode===333){
+        this.errorMessage=this.errorResponse.errorMessage
       }
+      else{
+        NavigationService.navigateToErrorView()
+      }
+      return undefined
     },
     validateFormCorrectInput() {
       let errorMessages = []
@@ -118,10 +128,11 @@ export default {
         t.transactionTypeId === transactionTypeId ? { ...t, isAvailable: !t.isAvailable } : t,
       )
     },
-    resetAllMessages(){
-      this.successMessage=''
-      this.errorMessage=''
-    }
+    resetAllMessages() {
+      this.successMessage = ''
+      this.errorMessage = ''
+    },
+
   },
   beforeMount() {
     this.getCities()
@@ -163,7 +174,12 @@ export default {
     </div>
     <div class="row justify-content-center">
       <div class="col-3">
-        <ImageInput @event-new-image-selected="location.imageData = $event" />
+        <ImageInput
+          ref="imageInputRef"
+          @event-reset-image-select-complete="resetImageInput = false"
+          :reset-file-input="resetImageInput"
+          @event-new-image-selected="location.imageData = $event"
+        />
       </div>
     </div>
     <div class="row justify-content-center">

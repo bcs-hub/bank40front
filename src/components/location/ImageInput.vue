@@ -14,6 +14,7 @@ export default {
     resetFileInput(newValue) {
       if (newValue) {
         this.clearFileInput()
+        console.log("olen siisn")
       }
     },
   },
