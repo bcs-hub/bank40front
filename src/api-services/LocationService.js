@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
 
   sendPostAtmLocation(location) {
-    return axios.post('/api/atm/location', location )
+    return axios.post('/api/atm/location', location)
   },
 
   sendGetAtmLocations(cityId) {

@@ -40,7 +40,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -90,7 +89,14 @@ export default {
       // todo: kui on mingi viga, siis täida ära 'errorMessage'
       if (this.errorMessage === '') {
         LocationService.sendPostAtmLocation(this.location)
+          .then(() => this.handleAddLocationResponse())
+          .catch()
+          .finally()
       }
+    },
+
+    handleAddLocationResponse() {
+
     },
 
     validateFormCorrectInput() {
