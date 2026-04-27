@@ -6,15 +6,18 @@ import ImageInput from '@/components/location/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 import AtmsImage from '@/components/location/AtmsImage.vue'
-import AlertError from '@/components/AlertError.vue'
+import AlertError from '@/components/alerts/AlertError.vue'
 import LocationService from '@/api-services/LocationService.js'
+import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
 
 export default {
   name: 'LocationView',
-  components: { AlertError, AtmsImage, LocationForm, ImageInput, CitiesDropdown },
+  components: { AlertSuccess, AlertError, AtmsImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
       errorMessage: '',
+      successMessage: '',
+
       cities: [
         {
           cityId: 0,
@@ -25,7 +28,7 @@ export default {
         cityId: 0,
         locationName: '',
         numberOfAtms: 1,
-        imageData:'',
+        imageData: '',
         transactionTypes: [
           {
             transactionTypeId: 0,
@@ -44,11 +47,35 @@ export default {
         .finally()
     },
     addLocation() {
-      this.errorMessage = ''
+      this.resetAllMessages()
       let errorMessages = this.validateFormCorrectInput()
-      this.errorMessage = errorMessages.toString().replaceAll(',','; \n')
-      if(this.errorMessage===''){
-        let tagasi=LocationService.sendPostAtmLocation(this.location)
+      this.errorMessage = errorMessages.toString().replaceAll(',', '; \n')
+      if (this.errorMessage === '') {
+        LocationService.sendPostAtmLocation(this.location)
+          .then(() => {
+            this.handleAddLocationResponse()
+          })
+          .catch()
+          .finally()
+      }
+    },
+    handleAddLocationResponse() {
+      this.successMessage= 'Pangaautommadi asukoht "'+this.location.locationName+'" on süsteemi lisatud.'
+      this.clearLocationForm()
+    },
+    clearLocationForm() {
+      this.location={
+        cityId: 0,
+          locationName: '',
+        numberOfAtms: 1,
+        imageData: '',
+        transactionTypes: [
+        {
+          transactionTypeId: 0,
+          transactionTypeName: '',
+          isAvailable: false,
+        },
+      ],
       }
     },
     validateFormCorrectInput() {
@@ -91,6 +118,10 @@ export default {
         t.transactionTypeId === transactionTypeId ? { ...t, isAvailable: !t.isAvailable } : t,
       )
     },
+    resetAllMessages(){
+      this.successMessage=''
+      this.errorMessage=''
+    }
   },
   beforeMount() {
     this.getCities()
@@ -104,6 +135,7 @@ export default {
     <div class="row">
       <div class="col">
         <AlertError :error-message="errorMessage" />
+        <AlertSuccess :success-message="successMessage" />
         <h2>Lisa asukoht</h2>
       </div>
     </div>
@@ -131,7 +163,7 @@ export default {
     </div>
     <div class="row justify-content-center">
       <div class="col-3">
-        <ImageInput @event-new-image-selected="imageData = $event" />
+        <ImageInput @event-new-image-selected="location.imageData = $event" />
       </div>
     </div>
     <div class="row justify-content-center">

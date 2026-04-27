@@ -1,6 +1,6 @@
 <template>
   <select
-    @change="$emit('event-selected-city-changed', $event.target.value)"
+    @change="$emit('event-selected-city-changed',Number($event.target.value))"
     :value="selectedCityId"
     class="form-select"
     aria-label="Default select example"
