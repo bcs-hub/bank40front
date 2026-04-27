@@ -2,6 +2,7 @@
   <div class="container text-center">
     <div class="row justify-content-center mb-3">
       <div class="col col-4">
+        <AlertSuccess :success-message="successMessage" />
         <AlertError :error-message="errorMessage" />
         <h1>Lisa asukoht</h1>
       </div>
@@ -50,14 +51,16 @@ import ImageInput from '@/components/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 import AtmImage from '@/views/AtmImage.vue'
-import AlertError from '@/components/AlertError.vue'
+import AlertError from '@/components/alerts/AlertError.vue'
 import LocationService from '@/api-services/LocationService.js'
+import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
 
 export default {
   name: 'LocationView',
-  components: { AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
+  components: { AlertSuccess, AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
+      successMessage: '',
       errorMessage: '',
 
       location: {
@@ -84,6 +87,7 @@ export default {
   },
   methods: {
     addLocation() {
+      this.resetAllMessages()
       this.validateFormCorrectInput()
 
       // todo: kui on mingi viga, siis täida ära 'errorMessage'
@@ -96,11 +100,11 @@ export default {
     },
 
     handleAddLocationResponse() {
-
+      this.successMessage =
+        'Pangaautomaadi asukoht "' + this.location.locationName + '" on süsteemi lisatud :)'
     },
 
     validateFormCorrectInput() {
-      this.errorMessage = ''
       let errorMessages = []
 
       if (this.location.cityId === 0) {
@@ -149,6 +153,11 @@ export default {
         .then((response) => (this.location.transactionTypes = response.data))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
+    },
+
+    resetAllMessages() {
+      this.successMessage = ''
+      this.errorMessage = ''
     },
   },
   beforeMount() {
