@@ -2,6 +2,7 @@
   <div class="container text-center">
     <div class="row justify-content-center mb-3">
       <div class="col col-4">
+        <AlertSuccess :success-message="successMessage" />
         <AlertError :error-message="errorMessage" />
         <h1>Lisa asukoht</h1>
       </div>
@@ -30,7 +31,12 @@
     </div>
     <div class="row justify-content-center">
       <div class="col col-3">
-        <ImageInput @event-new-image-selected="location.imageData = $event" />
+        <ImageInput
+          ref="imageInputRef"
+          :reset-file-input="resetImageInput"
+          @event-new-image-selected="location.imageData = $event"
+          @event-reset-image-select-complete="resetImageInput = false"
+        />
       </div>
     </div>
     <div class="row justify-content-center">
@@ -40,7 +46,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -51,15 +56,19 @@ import ImageInput from '@/components/ImageInput.vue'
 import LocationForm from '@/components/location/LocationForm.vue'
 import TransactionTypeService from '@/api-services/TransactionTypeService.js'
 import AtmImage from '@/views/AtmImage.vue'
-import AlertError from '@/components/AlertError.vue'
+import AlertError from '@/components/alerts/AlertError.vue'
 import LocationService from '@/api-services/LocationService.js'
+import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
 
 export default {
   name: 'LocationView',
-  components: { AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
+  components: { AlertSuccess, AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
+      successMessage: '',
       errorMessage: '',
+
+      resetImageInput: false,
 
       location: {
         cityId: 0,
@@ -81,20 +90,57 @@ export default {
           cityName: '',
         },
       ],
+
+      errorResponse: {
+        message: '',
+        errorCode: 0,
+      },
     }
   },
   methods: {
     addLocation() {
+      this.resetAllMessages()
       this.validateFormCorrectInput()
 
       // todo: kui on mingi viga, siis täida ära 'errorMessage'
       if (this.errorMessage === '') {
         LocationService.sendPostAtmLocation(this.location)
+          .then(() => this.handleAddLocationResponse())
+          .catch((error) => this.handleAddLocationError(error))
+          .finally()
       }
     },
 
+    handleAddLocationResponse() {
+      this.successMessage =
+        'Pangaautomaadi asukoht "' + this.location.locationName + '" on süsteemi lisatud :)'
+      this.resetLocationFields()
+      //this.$refs.imageInputRef.clearFileInput()
+      // this.$refs.imageInputRef.$refs.fileInput.value = ''
+      this.resetImageInput = true
+    },
+
+    resetLocationFields() {
+      this.location.cityId = 0
+      this.location.locationName = ''
+      this.location.numberOfAtms = 1
+      this.location.imageData = ''
+      this.getLocationTransactionTypes()
+    },
+
+    handleAddLocationError(error) {
+      const statusCode = error.response.status
+      this.errorResponse = error.response.data
+
+      if (statusCode === 403 && this.errorResponse.errorCode === 333){
+        this.errorMessage = this.errorResponse.message
+      } else {
+        NavigationService.navigateToErrorView()
+      }
+    },
+
+
     validateFormCorrectInput() {
-      this.errorMessage = ''
       let errorMessages = []
 
       if (this.location.cityId === 0) {
@@ -143,6 +189,11 @@ export default {
         .then((response) => (this.location.transactionTypes = response.data))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
+    },
+
+    resetAllMessages() {
+      this.successMessage = ''
+      this.errorMessage = ''
     },
   },
   beforeMount() {

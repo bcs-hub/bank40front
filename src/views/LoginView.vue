@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import AlertError from '@/components/AlertError.vue'
+import AlertError from '@/components/alerts/AlertError.vue'
 import LoginService from '@/api-services/LoginService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 
