@@ -60,7 +60,7 @@ export default {
           .then(() => {
             this.handleAddLocationResponse()
           })
-          .catch((error)=>(this.handleAddLocationError(error.)))
+          .catch((error)=>(this.handleAddLocationError(error)))
           .finally()
       }
     },
