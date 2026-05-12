@@ -14,6 +14,7 @@
         />
       </div>
       <div class="col">
+        <AlertSuccess :success-message="successMessage" />
         <AlertError :error-message="errorMessage" />
         <LocationsTable :locations="locations" />
       </div>
@@ -27,13 +28,15 @@ import NavigationService from '@/navigation/NavigationService.js'
 import CitiesDropdown from '@/components/CitiesDropdown.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertError from '@/components/alerts/AlertError.vue'
+import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
 import LocationsTable from '@/components/location/LocationsTable.vue'
 
 export default {
   name: 'AtmsView',
-  components: { LocationsTable: LocationsTable, AlertError, CitiesDropdown },
+  components: { LocationsTable, AlertError, AlertSuccess, CitiesDropdown },
   data() {
     return {
+      successMessage: '',
       errorMessage: '',
       selectedCityId: 0,
 
@@ -106,6 +109,7 @@ export default {
     },
   },
   beforeMount() {
+    this.successMessage = this.$route.query.successMessage ?? ''
     this.getCities()
     this.getLocations()
   },

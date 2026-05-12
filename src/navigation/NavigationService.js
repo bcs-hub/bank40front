@@ -1,8 +1,13 @@
 import router from '@/router/index.js'
 
 export default {
-  navigateToAtmsView() {
-    router.push({ name: 'atmsRoute' })
+  navigateToAtmsView(successMessage) {
+    router.push({ name: 'atmsRoute', query: successMessage ? { successMessage } : undefined })
+  },
+
+  navigateToLocationView(locationId) {
+    // ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  1
+    router.push({ name: 'locationRoute', query: { locationId: locationId } })
   },
 
   navigateToErrorView() {

@@ -4,7 +4,7 @@
       <div class="col col-4">
         <AlertSuccess :success-message="successMessage" />
         <AlertError :error-message="errorMessage" />
-        <h1>Lisa asukoht</h1>
+        <h1>{{ locationId ? 'Muuda asukoha infot' : 'Lisa asukoht' }}</h1>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -41,8 +41,9 @@
     </div>
     <div class="row justify-content-center">
       <div class="col col-4">
-        <button type="submit" class="btn btn-outline-secondary me-3">Tagasi</button>
-        <button @click="addLocation" type="submit" class="btn btn-outline-success">Lisa</button>
+        <button @click="goBack" type="button" class="btn btn-outline-secondary me-3">Tagasi</button>
+        <button v-if="!locationId" @click="addLocation" type="submit" class="btn btn-outline-success">Lisa</button>
+        <button v-if="locationId" @click="saveLocation" type="submit" class="btn btn-outline-success">Salvesta</button>
       </div>
     </div>
   </div>
@@ -59,12 +60,14 @@ import AtmImage from '@/components/AtmImage.vue'
 import AlertError from '@/components/alerts/AlertError.vue'
 import LocationService from '@/api-services/LocationService.js'
 import AlertSuccess from '@/components/alerts/AlertSuccess.vue'
+import AuthService from '@/auth/AuthService.js'
 
 export default {
   name: 'LocationView',
   components: { AlertSuccess, AlertError, AtmImage, LocationForm, ImageInput, CitiesDropdown },
   data() {
     return {
+      locationId: null,
       successMessage: '',
       errorMessage: '',
       resetImageInput: false,
@@ -190,14 +193,39 @@ export default {
         .finally()
     },
 
+    saveLocation() {
+      this.resetAllMessages()
+      LocationService.sendPutAtmLocation(this.locationId, this.location)
+        .then(() => NavigationService.navigateToAtmsView('Pangaautomaadi askoha ' + this.location.locationName + ' info on edukalt muudetud'))
+        .catch((error) => this.handleAddLocationError(error))
+        .finally()
+    },
+
+    getLocation() {
+      LocationService.sendGetAtmLocation(this.locationId)
+        .then((response) => (this.location = response.data))
+        .catch(() => NavigationService.navigateToErrorView())
+        .finally()
+    },
+
+    goBack() {
+      NavigationService.navigateToAtmsView()
+    },
+
     resetAllMessages() {
       this.successMessage = ''
       this.errorMessage = ''
     },
   },
   beforeMount() {
+    AuthService.validateIsAdmin()
+    this.locationId = this.$route.query.locationId ? Number(this.$route.query.locationId) : null
     this.getCities()
-    this.getLocationTransactionTypes()
+    if (this.locationId) {
+      this.getLocation()
+    } else {
+      this.getLocationTransactionTypes()
+    }
   },
 }
 </script>

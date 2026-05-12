@@ -11,6 +11,7 @@
         <th scope="col">Linn</th>
         <th scope="col">Asukoht</th>
         <th scope="col">Teenused</th>
+        <th v-if="isAdmin" scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +30,9 @@
             {{ transactionType.transactionTypeName }}
           </div>
         </td>
+        <td v-if="isAdmin">
+          <PhPencilSimpleLine :size="16" style="cursor: pointer" @click="navigateToEdit(location.locationId)" />
+        </td>
       </tr>
     </tbody>
   </table>
@@ -38,10 +42,12 @@
 import LocationInfoModal from '@/components/location/LocationInfoModal.vue'
 import LocationService from '@/api-services/LocationService.js'
 import NavigationService from '@/navigation/NavigationService.js'
+import AuthService from '@/auth/AuthService.js'
+import { PhPencilSimpleLine } from '@phosphor-icons/vue'
 
 export default {
   name: 'LocationsTable',
-  components: { LocationInfoModal },
+  components: { LocationInfoModal, PhPencilSimpleLine },
   props: {
     locations: {},
   },
@@ -57,6 +63,11 @@ export default {
       },
     }
   },
+  computed: {
+    isAdmin() {
+      return AuthService.isLoggedIn() && AuthService.getLoggedInUserRoleName() === 'admin'
+    },
+  },
   methods: {
     openLocationInfoModal(locationId) {
       LocationService.sendGetAtmLocation(locationId)
@@ -71,6 +82,11 @@ export default {
     handleGetLocationResponse(data) {
       this.location = data
       this.isModalOpen = true
+    },
+
+    navigateToEdit(locationId) {
+      //                                          1
+      NavigationService.navigateToLocationView(locationId)
     },
   },
 }
