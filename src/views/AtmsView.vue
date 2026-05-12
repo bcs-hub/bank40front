@@ -16,7 +16,7 @@
       <div class="col">
         <AlertSuccess :success-message="successMessage" />
         <AlertError :error-message="errorMessage" />
-        <LocationsTable :locations="locations" />
+        <LocationsTable :locations="locations" @event-location-deleted="handleLocationDeleted" />
       </div>
     </div>
   </div>
@@ -106,6 +106,11 @@ export default {
 
     handleGetCitiesResponse(response) {
       this.cities = response.data
+    },
+
+    handleLocationDeleted() {
+      this.getLocations()
+      this.successMessage = 'Pangaautomaadi askoha info on edukalt kustutatud'
     },
   },
   beforeMount() {

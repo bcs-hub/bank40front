@@ -1,8 +1,15 @@
 <template>
   <LocationInfoModal
-    :isOpen="isModalOpen"
-    :location="location"
-    @event-modal-closed="isModalOpen = false"
+    :isOpen="isInfoModalOpen"
+    :location="selectedLocation"
+    @event-modal-closed="isInfoModalOpen = false"
+  />
+
+  <LocationDeleteModal
+    :isOpen="isDeleteModalOpen"
+    :location="selectedLocation"
+    @event-modal-closed="isDeleteModalOpen = false"
+    @event-location-deleted="deleteLocation"
   />
 
   <table v-if="locations.length > 0" class="table table-dark table-hover">
@@ -18,7 +25,7 @@
       <tr v-for="location in locations" :key="location.locationId">
         <td>{{ location.cityName }}</td>
         <td>
-          <a href="#" @click.prevent="openLocationInfoModal(location.locationId)">
+          <a href="#" @click.prevent="openInfoModal(location.locationId)">
             {{ location.locationName }}
           </a>
         </td>
@@ -32,6 +39,7 @@
         </td>
         <td v-if="isAdmin">
           <PhPencilSimpleLine :size="16" style="cursor: pointer" @click="navigateToEdit(location.locationId)" />
+          <PhX :size="16" class="ms-2" style="cursor: pointer" @click="openDeleteModal(location.locationId)" />
         </td>
       </tr>
     </tbody>
@@ -40,27 +48,30 @@
 
 <script>
 import LocationInfoModal from '@/components/location/LocationInfoModal.vue'
+import LocationDeleteModal from '@/components/location/LocationDeleteModal.vue'
 import LocationService from '@/api-services/LocationService.js'
 import NavigationService from '@/navigation/NavigationService.js'
 import AuthService from '@/auth/AuthService.js'
-import { PhPencilSimpleLine } from '@phosphor-icons/vue'
+import { PhPencilSimpleLine, PhX } from '@phosphor-icons/vue'
 
 export default {
   name: 'LocationsTable',
-  components: { LocationInfoModal, PhPencilSimpleLine },
+  components: { LocationInfoModal, LocationDeleteModal, PhPencilSimpleLine, PhX },
   props: {
     locations: {},
   },
+  emits: ['event-location-deleted'],
   data() {
     return {
-      isModalOpen: false,
-      selectedLocationId: null,
-      location: {
+      isInfoModalOpen: false,
+      isDeleteModalOpen: false,
+      selectedLocation: {
         locationName: '',
         numberOfAtms: null,
         imageData: '',
         transactionTypes: [],
       },
+      selectedLocationId: null,
     }
   },
   computed: {
@@ -69,24 +80,44 @@ export default {
     },
   },
   methods: {
-    openLocationInfoModal(locationId) {
+    openInfoModal(locationId) {
       LocationService.sendGetAtmLocation(locationId)
         .then((response) => this.handleGetLocationResponse(response.data))
         .catch(() => NavigationService.navigateToErrorView())
         .finally()
 
       this.selectedLocationId = locationId
-      this.isModalOpen = true
+      this.isInfoModalOpen = true
+    },
+
+    openDeleteModal(locationId) {
+      LocationService.sendGetAtmLocation(locationId)
+        .then((response) => this.handleGetLocationResponse(response.data))
+        .catch(() => NavigationService.navigateToErrorView())
+        .finally()
+
+      this.selectedLocationId = locationId
+      this.isDeleteModalOpen = true
     },
 
     handleGetLocationResponse(data) {
-      this.location = data
-      this.isModalOpen = true
+      this.selectedLocation = data
     },
 
     navigateToEdit(locationId) {
-      //                                          1
       NavigationService.navigateToLocationView(locationId)
+    },
+
+    deleteLocation() {
+      LocationService.sendDeleteAtmLocation(this.selectedLocationId)
+        .then(() => this.handleDeleteLocationResponse())
+        .catch(() => NavigationService.navigateToErrorView())
+        .finally()
+    },
+
+    handleDeleteLocationResponse() {
+      this.isDeleteModalOpen = false
+      this.$emit('event-location-deleted', this.selectedLocationId)
     },
   },
 }

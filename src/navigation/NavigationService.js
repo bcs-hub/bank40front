@@ -6,7 +6,6 @@ export default {
   },
 
   navigateToLocationView(locationId) {
-    // ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  1
     router.push({ name: 'locationRoute', query: { locationId: locationId } })
   },
 

@@ -14,6 +14,14 @@ export default {
     })
   },
 
+  sendDeleteAtmLocation(locationId) {
+    return axios.delete('/api/atm/location', {
+      params: {
+        locationId: locationId,
+      },
+    })
+  },
+
   sendGetAtmLocation(locationId) {
     return axios.get('/api/atm/location', {
       params: {
