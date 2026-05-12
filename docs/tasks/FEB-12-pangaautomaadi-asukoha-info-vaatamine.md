@@ -1,6 +1,6 @@
 # [FEB-12] Pangaautomaadi asukoha info vaatamine
 
-**Staatus:** To Do
+**Staatus:** Done
 **Prioriteet:** Medium
 **Reporter:** Rain
 **Vanem task:** [FEB-3] Asukoha vaade
@@ -70,11 +70,11 @@ GET /api/atm/location?locationId={locationId}
 
 ## Arendusülesanded
 
-- [ ] `src/components/location/LocationsTable.vue` — asukoha veerus muuta tekst lingiks
-- [ ] Luua uus komponent `src/components/location/LocationInfoBaseModal.vue`
-- [ ] Modali avamine ja sulgemine (overlay + X-nupp + Sulge-nupp)
-- [ ] API päring `GET /api/atm/location?locationId=xxx` modali avamisel
-- [ ] Andmete kuvamine modalis (nimi, automaatide arv, teenused, pilt — pildiks kasuta `AtmImage.vue` komponenti)
+- [x] `src/components/location/LocationsTable.vue` — asukoha veerus muuta tekst lingiks
+- [x] Luua uus komponent `src/components/location/LocationInfoModal.vue`
+- [x] Modali avamine ja sulgemine (overlay + X-nupp + Sulge-nupp)
+- [x] API päring `GET /api/atm/location?locationId=xxx` modali avamisel
+- [x] Andmete kuvamine modalis (nimi, automaatide arv, teenused, pilt — pildiks kasuta `AtmImage.vue` komponenti)
 
 ## Seotud failid
 
