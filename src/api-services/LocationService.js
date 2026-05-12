@@ -6,6 +6,14 @@ export default {
     return axios.post('/api/atm/location', location)
   },
 
+  sendGetAtmLocation(locationId) {
+    return axios.get('/api/atm/location', {
+      params: {
+        locationId: locationId,
+      },
+    })
+  },
+
   sendGetAtmLocations(cityId) {
     return axios.get('/api/atm/locations', {
       headers: { Prefer: this.getPreferValue(cityId) },
