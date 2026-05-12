@@ -20,4 +20,10 @@ export default {
       NavigationService.navigateToNotAuthorizedView()
     }
   },
+
+  validateIsAdmin() {
+    if (this.getLoggedInUserRoleName() !== 'admin') {
+      NavigationService.navigateToNotAuthorizedView()
+    }
+  },
 }

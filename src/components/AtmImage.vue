@@ -1,7 +1,7 @@
 <template>
   <img
     v-if="imageData === ''"
-    src="@/assets/images/atm.png"
+    src="../assets/images/atm.png"
     class="img-thumbnail"
     alt="Pangaautomaadi pilt"
   /><img v-else :src="imageData" class="img-thumbnail" alt="Pangaautomaadi pilt" />
