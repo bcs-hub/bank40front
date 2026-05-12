@@ -18,7 +18,7 @@
         <td>{{ location.cityName }}</td>
         <td>
           <a href="#" @click.prevent="openLocationInfoModal(location.locationId)">
-            {{ location.locationName }} {{ location.locationId }}
+            {{ location.locationName }}
           </a>
         </td>
         <td>

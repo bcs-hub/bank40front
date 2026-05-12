@@ -9,10 +9,12 @@
             v-for="transactionType in location.transactionTypes"
             :key="transactionType.transactionTypeName"
           >
-            {{ transactionType.transactionTypeName }}
+            <div v-if="transactionType.isAvailable">
+              {{ transactionType.transactionTypeName }}
+            </div>
           </div>
         </div>
-        <AtmImage :imageData="location.imageData" />
+        <AtmImage :imageData="location.imageData" style="height: 200px" />
       </div>
     </template>
   </BaseModal>
